@@ -27,7 +27,7 @@ print("A3 =", A3 * 1000, "mA")
 
 R_v = V1 / A1
 
-R_e = (V2 - A1 * (R_v + V2 / A3)) /
+R_e = (V2 - A1 * (R_v + V2 / A3)) / \
 	  (A1 + (V2 * A1) / (R_v * A3) - V2 / R_v)
 
 R_a = (V2 / A3) + (V2 / (R_v * A3)) * R_e

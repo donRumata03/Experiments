@@ -2,13 +2,15 @@
 %! Date = 26.09.2020
 
 % Preamble
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 % Packages
 \usepackage{amsmath}
 \usepackage{romannum}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{setspace}
+% \usepackage[margin=1.0in]{geometry}
 
 \title{On non-ideal voltage and current measurement tools}
 \date{26.09.2020}
@@ -18,9 +20,18 @@
 % Document
 \begin{document}
     \pagenumbering{gobble}
+    % \thispagestyle{empty}
+
+    \doublespacing
+    \doublespacing
+
     \maketitle
     \newpage
     \pagenumbering{arabic}
+
+    \tableofcontents
+
+    \newpage
 
     \section{Abstract}\label{sec:abstract}
     It`s contents should be too abstract for me to be able to write it.
@@ -40,12 +51,14 @@
 
     \section{Solving equation system}\label{sec:solving-equation-system}
 
+    \underline{\textit{\textbf{Some bold, italic and underlined text here}}}
+
     \begin{equation}
-        A_1 = \frac{\varepsilon}{I}\label{eq:equation2}
+        A_1 = \frac{\varepsilon}{R_{all}}\label{eq:equation1}
     \end{equation}
 
     \begin{equation}
-        V_1 = \frac{\varepsilon \cdot R_v}{I}\label{eq:equation}
+        V_1 = \varepsilon \cdot \frac{R_v}{R_{all}}\label{eq:equation2}
     \end{equation}
 
     \begin{equation*}
@@ -61,9 +74,67 @@
     \end{equation*}
 
     \begin{equation}
-        A_3 = \varepsilon \cdot \frac{1}{R_A + R_\varepsilon} = (V_2 + V_2 \cdot \frac{R_\varepsilon}{R_v}) \cdot \frac{1}{R_A + R_\varepsilon} \label{eq:equation4}
+        A_3 = \varepsilon \cdot \frac{1}{R_A + R_\varepsilon} = \left(V_2 + V_2 \cdot \frac{R_\varepsilon}{R_v}\right) \cdot \frac{1}{R_A + R_\varepsilon} \label{eq:equation4}
     \end{equation}
 
+    \begin{equation*}
+        A_3 \cdot R_A + A_3 \cdot R_\varepsilon = V_2 + R_\varepsilon \cdot \frac{V_2}{R_v}
+    \end{equation*}
+
+    \begin{equation*}
+        R_\varepsilon \cdot \left( A_3 - \frac{V_2}{R_v} \right) = V_2 + A_3 \cdot R_A
+    \end{equation*}
+
+    \begin{equation*}
+        R_\varepsilon = \frac{V_2 + A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}
+    \end{equation*}
+
+    \begin{equation*}
+        \left(\ref{eq:equation1} \right) \rightarrow A_1 = \frac{\varepsilon}{R_{all}} = \frac{\varepsilon}{R_v + R_A + R_\varepsilon} = \frac{\varepsilon}{R_v + R_A + \frac{V_2 + A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}} = \frac{\varepsilon}{R_v + \frac{V_2}{A_3 - \frac{V_2}{R_v}} + R_A \cdot \left( 1 + \frac{A_3}{A_3 - \frac{V_2}{R_v}} \right)}
+    \end{equation*}
+
+    \begin{equation*}
+        \varepsilon = V_2 + V_2 \cdot \frac{\frac{V_2 + A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}}{R_v} = V_2 + V_2 \cdot \frac{\frac{V_2}{A_3 - \frac{V_2}{R_v}} + \frac{A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}}{R_v} = V_2 + \frac{V_2^2}{R_v \cdot A_3 - V_2} + R_A \cdot \frac{A_3 \cdot V_2}{A_3 \cdot R_v - V_2}
+    \end{equation*}
+
+    \begin{equation*}
+        V_2 + \frac{V_2^2}{R_v \cdot A_3 - V_2} + R_A \cdot \frac{A_3 \cdot V_2}{A_3 \cdot R_v - V_2} = A_1 \cdot R_v + \frac{V_2 \cdot A_1}{A_3 - \frac{V_2}{R_v}} + R_A \cdot A_1 \cdot \left( 1 + \frac{A_3}{A_3 - \frac{V_2}{R_v}} \right)
+    \end{equation*}
+
+    \begin{equation*}
+        R_A \cdot \frac{A_3 \cdot V_2}{A_3 \cdot R_v - V_2} - R_A \cdot A_1 \cdot \left( 1 + \frac{A_3}{A_3 - \frac{V_2}{R_v}} \right) = A_1 \cdot R_v + \frac{V_2 \cdot A_1}{A_3 - \frac{V_2}{R_v}} - V_2 - \frac{V_2^2}{R_v \cdot A_3 - V_2}
+    \end{equation*}
+
+    \begin{equation*}
+        R_A \cdot \left( \frac{A_3 \cdot V_2}{A_3 \cdot R_v - V_2} - A_1 \cdot \left( 1 + \frac{A_3}{A_3 - \frac{V_2}{R_v}} \right) \right) = A_1 \cdot R_v + \frac{V_2 \cdot A_1}{A_3 - \frac{V_2}{R_v}} - V_2 - \frac{V_2^2}{R_v \cdot A_3 - V_2}
+    \end{equation*}
+
+    \begin{equation*}
+        R_A = \frac{A_1 \cdot R_v + \frac{V_2 \cdot A_1}{A_3 - \frac{V_2}{R_v}} - V_2 - \frac{V_2^2}{R_v \cdot A_3 - V_2}}{\frac{A_3 \cdot V_2}{A_3 \cdot R_v - V_2} - A_1 \cdot \left( 1 + \frac{A_3}{A_3 - \frac{V_2}{R_v}} \right)}
+    \end{equation*}
+
+    \begin{equation*}
+        R_\varepsilon = \frac{V_2 + A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}
+    \end{equation*}
+
+    \begin{equation*}
+        \varepsilon = V_2 + V_2 \cdot \frac{R_\varepsilon}{R_v}
+    \end{equation*}
+
+
+
+
+    \section{Measurement Results}\label{sec:measurement-results}
+
+
+
+    \section{The Answer}\label{sec:answer}
+So, the impedance values are the following:
+
+$R_v = 1$
+$R_e = 1$
+$R_A = 1$
+$\varepsilon = 1$
 
 
 

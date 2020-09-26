@@ -1,3 +1,6 @@
 [submodule "BadVoltageSensors/dispersion_lib"]
 	path = BadVoltageSensors/dispersion_lib
 	url = https://github.com/sitandr/dispersion_counter
+[submodule "Pendulum_signal_processing"]
+	path = Pendulum_signal_processing
+	url = https://github.com/donRumata03/Pendulum-signal-processing
