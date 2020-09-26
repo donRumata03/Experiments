@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.11)  26 SEP 2020 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.11)  26 SEP 2020 21:35
 entering extended mode
 **./main.tex
 (main.tex
@@ -311,7 +311,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\textnumero' on input line 42.
 
-<images/schemes/scheme0.png, id=52, 1204.5pt x 903.375pt>
+<images/schemes/scheme0.png, id=57, 1204.5pt x 903.375pt>
 File: images/schemes/scheme0.png Graphic file (type png)
 <use images/schemes/scheme0.png>
 Package pdftex.def Info: images/schemes/scheme0.png  used on input line 43.
@@ -370,21 +370,22 @@ Overfull \hbox (27.66008pt too wide) detected at line 110
 2   \OML/cmm/m/it/12 V[] \OMS/cmsy/m/n/12   []
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
  (D:/Projects\Experiments\BadVoltageSensors\paper\out\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 64859D956EDA39DC580E5B1E1FD98A7D;432.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
+(rerunfilecheck)             Checksum: E9A2C71A8F0CBBB3D1CFFCDA64077AA4;486.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 5947 strings out of 480930
- 90744 string characters out of 2909550
- 354514 words of memory out of 3000000
- 21693 multiletter control sequences out of 15000+200000
+ 5951 strings out of 480930
+ 90795 string characters out of 2909550
+ 354556 words of memory out of 3000000
+ 21695 multiletter control sequences out of 15000+200000
  540015 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,6n,31p,377b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -402,9 +403,9 @@ c/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 Output written on D:/Projects\Experiments\BadVoltageSensors\paper\out\main.pdf 
-(7 pages, 2503287 bytes).
+(8 pages, 2510123 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 153 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 70 words of extra memory for PDF output out of 10000 (max. 10000000)
 
