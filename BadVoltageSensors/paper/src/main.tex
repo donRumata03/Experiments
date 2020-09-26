@@ -22,9 +22,6 @@
     \pagenumbering{gobble}
     % \thispagestyle{empty}
 
-    \doublespacing
-    \doublespacing
-
     \maketitle
     \newpage
     \pagenumbering{arabic}
@@ -39,19 +36,45 @@
     The contents of this section should be too abstract for me to be able to write it.
     \end{center}
 
+    \newpage
+
     \section{Experiments}\label{sec:experiments}
     There were 3 experiments and 4 measurements arranged:
 
+    % First experiment:
     \subsection{Experiment \textnumero1: Sequential plugging in}\label{subsec:experiment-1} % \Romannum{1}
     \includegraphics[width=\linewidth]{images/schemes/Sequential.png}
+    \begin{equation*}
+        A_1 = \frac{\varepsilon}{R_{all}}
+    \end{equation*}
+    \begin{equation*}
+        V_1 = \varepsilon \cdot \frac{R_v}{R_{all}}
+    \end{equation*}
+    \begin{equation*}
+        R_{all} = R_\varepsilon + R_A + R_v
+    \end{equation*}
 
+    \newpage
+
+    % Second experiment:
     \subsection{Experiment \textnumero2: Only Voltmeter}\label{subsec:experiment-2}
     \includegraphics[width=\linewidth]{images/schemes/OnlyVoltmeter.png}
+    \begin{equation*}
+        V_2 = \varepsilon \cdot \frac{R_v}{R_v + R_\varepsilon}
+    \end{equation*}
 
+    \newpage
+
+    % Third experiment:
     \subsection{Experiment \textnumero3: Only Ampermeter}\label{subsec:experiment-3}
     \includegraphics[width=\linewidth]{images/schemes/OnlyAmperemeter.png}
+    \begin{equation*}
+        A_3 = \varepsilon \cdot \frac{1}{R_A + R_\varepsilon}
+    \end{equation*}
 
+    \newpage
 
+    % Solving equation:
     \section{Solving equation system}\label{sec:solving-equation-system}
 
     \underline{\textit{\textbf{Some bold, italic and underlined text here}}}
