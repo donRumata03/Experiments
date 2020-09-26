@@ -10,11 +10,11 @@ def convert_voltage(measured_voltage):
 	return measured_voltage * (6.1 / 6)
 
 # Sequentially
-V1 = convert_voltage(Num_value(3.25, 0.1)) # Volts
+V1 = convert_voltage(Num_value(3.25, 0.03)) # Volts
 A1 = convert_current(Num_value(0.6, 0.07)) # Amperes
 
 # Only Ampermeter
-V2 = convert_voltage(Num_value(3.7, 0.1)) # Volts
+V2 = convert_voltage(Num_value(3.7, 0.03)) # Volts
 
 # Only Voltmeter
 A3 = convert_current(Num_value(1.8, 0.07)) # Amperes
@@ -28,14 +28,18 @@ print("A3 =", A3 * 1000, "mA")
 
 R_v = V1 / A1
 
-R_a = (V2 / A3) + (V2 / (R_v * A3)) * R_e
-E = (V2 / R_v) * (R_v + R_e)
+R_a = ( A1 * R_v + (V2 * A1) / (A3 - V2 / R_v) - V2 - V2 ** 2 / (R_v * A3 - V2) ) / \
+ 	  ( (A3 * V2) / (A3 * R_v - V2) - A1 * (1 + A3 / (A3 - V2 / R_v)) )
+
+R_e = (V2 + A3 * R_a) / (A3 - V2 / R_v)
+
+eps = V2 * (1 + (R_e / R_v))  # (V2 / R_v) * (R_v + R_e)
 
 print("____________________________________________")
-print(f"Rv = {R_v}")
-print("Rε =", R_e)
-print(f"Ra = {R_a}")
-print("ε =", E)
+print(f"Rv = {R_v} Ohm")
+print("Rε =", R_e, "Ohm")
+print(f"Ra = {R_a} Ohm")
+print("ε =", eps, "Volts")
 
 # x = Num_value(1, 0.1)
 # print(x)
