@@ -1,8 +1,9 @@
-\contentsline {section}{\numberline {1}Abstract}{2}{section.1}%
-\contentsline {section}{\numberline {2}Experiments}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Experiment \textnumero 1: Sequential plugging in}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Experiment \textnumero 2: Only Voltmeter}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Experiment \textnumero 3: Only Ampermeter}{5}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Solving equation system}{6}{section.3}%
-\contentsline {section}{\numberline {4}Measurement Results}{7}{section.4}%
-\contentsline {section}{\numberline {5}The Answer}{7}{section.5}%
+\contentsline {chapter}{Contents}{1}{section*.1}%
+\contentsline {section}{\numberline {0.1}Abstract}{2}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Experiments}{3}{section.0.2}%
+\contentsline {subsection}{Experiment \textnumero 1: Sequential plugging in}{3}{section*.2}%
+\contentsline {subsection}{Experiment \textnumero 2: Only Voltmeter}{4}{section*.3}%
+\contentsline {subsection}{Experiment \textnumero 3: Only Ampermeter}{5}{section*.4}%
+\contentsline {section}{\numberline {0.3}Solving equation system}{6}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Measurement Results}{7}{section.0.4}%
+\contentsline {section}{\numberline {0.5}The Answer}{7}{section.0.5}%
