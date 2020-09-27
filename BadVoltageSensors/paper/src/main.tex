@@ -19,6 +19,8 @@
 
 % Document
 \begin{document}
+    \setsecnumdepth{subsection}
+    \renewcommand{\thesection}{\arabic{section}}
     \pagenumbering{gobble}
     % \thispagestyle{empty}
 
@@ -119,8 +121,17 @@
         R_\varepsilon = \frac{V_2 + A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}
     \end{equation*}
 
+
     \begin{equation*}
-        \left(\ref{eq:equation1} \right) \rightarrow A_1 = \frac{\varepsilon}{R_{all}} = \frac{\varepsilon}{R_v + R_A + R_\varepsilon} = \frac{\varepsilon}{R_v + R_A + \frac{V_2 + A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}} = \frac{\varepsilon}{R_v + \frac{V_2}{A_3 - \frac{V_2}{R_v}} + R_A \cdot \left( 1 + \frac{A_3}{A_3 - \frac{V_2}{R_v}} \right)}
+        \left(\ref{eq:equation1} \right) \rightarrow A_1 =
+        \frac{\varepsilon}{R_{all}} =
+        \frac{\varepsilon}{R_v + R_A + R_\varepsilon} =
+        \frac{\varepsilon}{R_v + R_A + \frac{V_2 + A_3 \cdot R_A}{A_3 - \frac{V_2}{R_v}}}
+    \end{equation*}
+
+
+    \begin{equation*}
+        A_1 = \frac{\varepsilon}{R_v + \frac{V_2}{A_3 - \frac{V_2}{R_v}} + R_A \cdot \left( 1 + \frac{A_3}{A_3 - \frac{V_2}{R_v}} \right)}
     \end{equation*}
 
     \begin{equation*}
@@ -172,14 +183,37 @@
         A_3 = \left( \left(1.8 \pm 0.07 \right) Ampere \right) \times \frac{15.8}{2000} = \left(14.22 \pm 0.6 \right) milliAmpere
     \end{equation*}
 
+    \section {Computing the Result}\label{sec:computing-the-result}
+    For this purpose I`ve written a python script, which is situated here: \newline
+    \url{https://github.com/donRumata03/Experiments/blob/master/BadVoltageSensors/new_formula_counter.py} \newline
+    To compute the dispersion automatically I used Andrew Sitnikov`s library from \url{https://github.com/sitandr/dispersion_counter} \newline
+    However, it contained some bugs, for example, with computing relative dispersion of negative numbers, so, I`ve made some commits to that repository.
+
 
     \section{The Answer}\label{sec:answer}
-So, the impedance and voltage values are the following:
+    So, the impedance and voltage values are the following:
 
-$R_v = 697. Ohm$
-$R_e = 749. Ohm$
-$R_A = 200. Ohm$
-$\varepsilon = 7.8 Volts$
+    \begin{equation*}
+        R_v = (697 \pm 18) ~Ohm
+    \end{equation*}
+    
+    \begin{equation*}
+        R_e = (75 \pm 13) \times 10^1 ~Ohm
+    \end{equation*}
+
+    \begin{equation*}
+        R_A = (20 \pm 5) \times 10^1 ~Ohm
+    \end{equation*}
+
+    \begin{equation*}
+        \varepsilon = (7.8 \pm 1.4) ~Volts
+    \end{equation*}
+
+
+    \section{Conclusion}\label{sec:conclusion}
+    Unfortunately, there are many computations required to find the answer, which decrease the accuracy of it.\newline
+    However, the answer itself seems to me reasonable.\newline
+    As expected, the quality of the devices leaves much to be desired\ldots
 
 
 

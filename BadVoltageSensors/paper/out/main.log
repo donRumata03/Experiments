@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.11)  26 SEP 2020 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.11)  27 SEP 2020 14:31
 entering extended mode
 **./main.tex
 (main.tex
@@ -620,32 +620,27 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 
 {C:/Users/Vova/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (D:/Projects\Experiments\BadVoltageSensors\paper\out\main.toc) [1] [2]
-<images/schemes/Sequential.png, id=49, 476.0184pt x 260.4129pt>
+<images/schemes/Sequential.png, id=59, 476.0184pt x 260.4129pt>
 File: images/schemes/Sequential.png Graphic file (type png)
 <use images/schemes/Sequential.png>
-Package pdftex.def Info: images/schemes/Sequential.png  used on input line 50.
+Package pdftex.def Info: images/schemes/Sequential.png  used on input line 52.
 (pdftex.def)             Requested size: 383.0pt x 209.53061pt.
  [3 <./images/schemes/Sequential.png>]
-<images/schemes/OnlyVoltmeter.png, id=62, 265.7127pt x 302.5704pt>
+<images/schemes/OnlyVoltmeter.png, id=72, 265.7127pt x 302.5704pt>
 File: images/schemes/OnlyVoltmeter.png Graphic file (type png)
 <use images/schemes/OnlyVoltmeter.png>
 Package pdftex.def Info: images/schemes/OnlyVoltmeter.png  used on input line 6
-5.
+7.
 (pdftex.def)             Requested size: 383.0pt x 436.16272pt.
  [4 <./images/schemes/OnlyVoltmeter.png>]
-<images/schemes/OnlyAmperemeter.png, id=69, 265.9536pt x 230.0595pt>
+<images/schemes/OnlyAmperemeter.png, id=79, 265.9536pt x 230.0595pt>
 File: images/schemes/OnlyAmperemeter.png Graphic file (type png)
 <use images/schemes/OnlyAmperemeter.png>
 Package pdftex.def Info: images/schemes/OnlyAmperemeter.png  used on input line
- 74.
+ 76.
 (pdftex.def)             Requested size: 383.0pt x 331.32753pt.
  [5 <./images/schemes/OnlyAmperemeter.png>]
-Overfull \hbox (99.55655pt too wide) detected at line 124
-[] \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = [] = [] = [] = []
- []
-
-
-Overfull \hbox (46.42783pt too wide) detected at line 128
+Overfull \hbox (46.42783pt too wide) detected at line 139
 \OML/cmm/m/it/12 " \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 + \OM
 L/cmm/m/it/12 V[] \OMS/cmsy/m/n/12  [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 V[] 
 \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 V[] \OMS/cmsy/m/n/12  [] \OT1/cmr/m/n/12 = 
@@ -654,7 +649,7 @@ L/cmm/m/it/12 V[] \OMS/cmsy/m/n/12  [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 V[]
  []
 
 
-Overfull \hbox (23.55344pt too wide) detected at line 132
+Overfull \hbox (23.55344pt too wide) detected at line 143
 \OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 + [] + \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/
 12  [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 A[] \OMS/cmsy/m/n/12  \OML/cmm/m/it
 /12 R[] \OT1/cmr/m/n/12 + [] + \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12  \OML/cmm
@@ -662,7 +657,7 @@ Overfull \hbox (23.55344pt too wide) detected at line 132
  []
 
 
-Overfull \hbox (24.13713pt too wide) detected at line 136
+Overfull \hbox (24.13713pt too wide) detected at line 147
 \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12  []   \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n
 /12  \OML/cmm/m/it/12 A[] \OMS/cmsy/m/n/12  [] \OT1/cmr/m/n/12 = \OML/cmm/m/i
 t/12 A[] \OMS/cmsy/m/n/12  \OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 + [] \OMS/cmsy
@@ -670,33 +665,39 @@ t/12 A[] \OMS/cmsy/m/n/12  \OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 + [] \OMS/cmsy
  []
 
 [6]
-Overfull \hbox (34.66008pt too wide) detected at line 140
+Overfull \hbox (34.66008pt too wide) detected at line 151
 \OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12  [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 A
 [] \OMS/cmsy/m/n/12  \OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/1
 2   \OML/cmm/m/it/12 V[] \OMS/cmsy/m/n/12   []
  []
 
-[7]
+
+Overfull \hbox (67.77522pt too wide) in paragraph at lines 187--191
+[]$\OT1/cmtt/m/n/12 https : / / github . com / donRumata03 / Experiments / blob
+ / master / BadVoltageSensors /
+ []
+
+[7] [8]
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
  (D:/Projects\Experiments\BadVoltageSensors\paper\out\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E6F7A253F9EC2CBAE828232E4C451E38;350.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
+(rerunfilecheck)             Checksum: F57BCBE646572F59CE33A3A947A3BD46;474.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 9294 strings out of 480930
- 136804 string characters out of 2909550
- 434130 words of memory out of 3000000
- 25021 multiletter control sequences out of 15000+200000
- 541243 words of font info for 54 fonts, out of 3000000 for 9000
+ 9304 strings out of 480930
+ 136955 string characters out of 2909550
+ 434258 words of memory out of 3000000
+ 25027 multiletter control sequences out of 15000+200000
+ 541412 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,29p,377b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,11n,29p,319b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 cbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:
@@ -708,11 +709,12 @@ pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 Output written on D:/Projects\Experiments\BadVoltageSensors\paper\out\main.pdf 
-(8 pages, 221411 bytes).
+(9 pages, 234899 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 64 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
