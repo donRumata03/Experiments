@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.11)  27 SEP 2020 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.11)  2 OCT 2020 21:28
 entering extended mode
 **./main.tex
 (main.tex
@@ -712,7 +712,7 @@ c/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 Output written on D:/Projects\Experiments\BadVoltageSensors\paper\out\main.pdf 
-(9 pages, 234899 bytes).
+(9 pages, 234817 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)

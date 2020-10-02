@@ -45,3 +45,10 @@ print("ε =", eps, "Volts")
 # print(x)
 
 # console_mode()
+
+# Validate results:
+
+print("A1 = ε / (R_v + R_e + R_A) : ", A1, "?=", eps  / (R_v + R_e + R_a))
+print("V1 = ε * R_v / (R_v + R_e + R_A)", V1, "?=", eps * R_v / (R_v + R_e + R_a))
+print("V2 = ε * R_v / (R_v + R_e)", V2, "?=", eps * R_v / (R_v + R_e))
+print("A3 = ε / (R_a + R_e)", A3, "?=", eps / (R_a + R_e))
