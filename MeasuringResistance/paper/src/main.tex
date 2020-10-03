@@ -26,6 +26,12 @@
 \author{Latipov Vladimir \&\& Onishenko Sergiy}
 
 
+\newcommand{\initialCurrentDispersion}{0.03}
+\newcommand{\initialVoltageDispersion}{0.1}
+
+\newcommand{\voltageConvertingFrac}{\frac{6.2}{6}}
+\newcommand{\currentConvertingFrac}{\frac{15.8}{2000}}
+
 % Document
 \begin{document}
     \maxtocdepth{subsection}
@@ -198,6 +204,33 @@
         R = \frac{\varepsilon}{A_5} - R_\varepsilon - R_V - R_A
     \end{equation}
 
+    \newpage
+
+    % Scheme 6:
+    \subsection{Scheme 6}\label{subsec:scheme-6}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme6.png}
+
+    $let~ R_{sum} ~be~ \frac{1}{\frac{1}{R} + \frac{1}{R_A}}$
+
+    \begin{equation*}
+        I_{\varepsilon} = \frac{\varepsilon}{R_{\varepsilon} + R_{sum}}
+    \end{equation*}
+
+    \begin{equation*}
+        U_R = U_{R_A} = \varepsilon - I_{\varepsilon} = \varepsilon - \frac{\varepsilon}{R_{\varepsilon} + R_{sum}}
+        = \varepsilon \cdot \left( 1 - \frac{1}{R_{\varepsilon} + R_{sum}} \right)
+    \end{equation*}
+
+    \begin{equation*}
+        U_{R_A} = R_A \cdot I_{R_A} = R_A \cdot A_6
+    \end{equation*}
+
+    \begin{equation}\label{eq:equation6}
+        R = ?
+    \end{equation}
+
+
 
 %
 %        \begin{minted}[linenos]{c}
@@ -212,6 +245,32 @@
         As mentioned above (\nameref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.
 
     \section{Measurement Results}\label{sec:measurement-results}
+
+    Here they are:
+
+    % First Measurement:
+    \begin{equation*}
+        A_1 = \left( 0.98 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Second Measurement:
+    \begin{equation*}
+        V_2 = \left( 1.5 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_2 = \left( 1.1 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Third Measurement:
+    \begin{equation*}
+        V_2 = \left( 1.5 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_2 = \left( 1.1 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+
+
 
     \section {Looking for Data Outliers}\label{sec:looking-for-data-outliers}
 

@@ -7,9 +7,10 @@
 \contentsline {subsection}{Scheme 3}{6}{section*.4}%
 \contentsline {subsection}{Scheme 4}{7}{section*.5}%
 \contentsline {subsection}{Scheme 5}{8}{section*.6}%
-\contentsline {section}{\numberline {4}Dispersion}{8}{section.0.4}%
+\contentsline {subsection}{Scheme 6}{9}{section*.7}%
+\contentsline {section}{\numberline {4}Dispersion}{9}{section.0.4}%
 \contentsline {section}{\numberline {5}Measurement Results}{9}{section.0.5}%
-\contentsline {section}{\numberline {6}Looking for Data Outliers}{9}{section.0.6}%
-\contentsline {section}{\numberline {7}Optimizing the Target Function}{9}{section.0.7}%
-\contentsline {section}{\numberline {8}The Answer}{9}{section.0.8}%
-\contentsline {section}{\numberline {9}Conclusion}{9}{section.0.9}%
+\contentsline {section}{\numberline {6}Looking for Data Outliers}{10}{section.0.6}%
+\contentsline {section}{\numberline {7}Optimizing the Target Function}{10}{section.0.7}%
+\contentsline {section}{\numberline {8}The Answer}{10}{section.0.8}%
+\contentsline {section}{\numberline {9}Conclusion}{10}{section.0.9}%
