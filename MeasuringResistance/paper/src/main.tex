@@ -12,6 +12,12 @@
 \usepackage{setspace}
 \usepackage{circuitikz}
 
+\usetikzlibrary{circuits}
+\usetikzlibrary{circuits.ee}
+\usetikzlibrary{circuits.ee.IEC}
+\usetikzlibrary{circuits.logic.IEC}
+
+
 \title{\textbf{\Huge{Measuring resistance using non-ideal devices}}}
 \date{03.10.2020}
 \author{Latipov Vladimir \&\& Onishenko Sergiy}
@@ -46,15 +52,13 @@
     \end{center}
     \end{vplace}
 
-    \section{}
-
     \newpage
 
 \section{The Plan}\label{sec:the-plan}
     The task is to measure the impedance of the given resistor as precise as possible.\newline
     To achieve this aim, we decided to perform these operations:\newline
 
-    \begin{enumerate}
+    \begin{itemize}
         \item Compute the resistance and its dispersion individually for each scheme
         \item Deduct which scheme's results stand out from the center ($\mu$), for example, the threshold value of remoteness from the center might be equal to $2 \cdot \sigma$
         \item Dropout the data outliers (outstanding measurements)
@@ -62,9 +66,23 @@
         \item Optimize the function which is ${\sum_{i=0}^{i<n_{equations}} (EQ_{i_{left}} - EQ_{i_{right}}) ^ 2}$\newline
             where $EQ_{i_{left}}$ and $EQ_{i_{right}}$ are left and right sides of $i^{th}$ equation respectively
         \item As the result, we'll find the resultant resistance.\newline
-        Obviously, the target function won't be equal to zero because we have 8 equations and only one variable, but the accuracy of the result will be significantly better than all of the initial results.
-        \item Thus 
-    \end{enumerate}
+        Obviously, the target function won't be equal to zero because we have 8 equations and only one variable, but the accuracy of the result will be significantly better than all the initial results.
+        \item Thus, the final result should be definitely found this way.
+    \end{itemize}
+
+\section{Schemes & Equations}\label{sec:schemes-&-equations}
+    There are only 8 \textit{\textbf{reasonable}} schemes can be assembled using these items:
+    \begin{itemize}
+        \item Exactly one battery
+        \item Exactly one resistor to measure
+        \item Not more than one amperemeter
+        \item Not more than one voltmeter
+    \end{itemize}
+
+    Here are the schemes:
+
+    \subsection{Scheme 1}\label{subsec:scheme-1}
+
 
 
 %    \begin{figure}[h!]
