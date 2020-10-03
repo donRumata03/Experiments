@@ -85,9 +85,10 @@
         Here are the schemes:
 
     % Scheme 1
-    \subsection{Scheme 1}\label{subsec:scheme-1}
 
-            \includegraphics[width=\linewidth]{../schemes/Scheme1.png}
+    \begin{center}
+    \subsection{Scheme 1}\label{subsec:scheme-1}
+        \includegraphics[width=\linewidth]{../schemes/Scheme1.png}
 
             \begin{equation*}
                 A = \frac{\varepsilon}{R_\varepsilon + R_A + R}
@@ -96,6 +97,8 @@
             \begin{equation}\label{eq:equation1}
                 R = \frac{\varepsilon}{A_1} - R_\varepsilon - R_A
             \end{equation}
+    \end{center}
+
 
     \newpage
 
@@ -105,11 +108,62 @@
     \includegraphics[width=\linewidth]{../schemes/Scheme2.png}
 
     \begin{equation*}
-        A = \frac{\varepsilon}{R_\varepsilon + R_A + \frac{1}{\frac{1}{R} + \frac{1}{R_V}}}
+        A_2 = \frac{\varepsilon}{R_\varepsilon + R_A + \frac{1}{\frac{1}{R} + \frac{1}{R_V}}}
+    \end{equation*}
+
+    \begin{equation*}
+        V_2 = A_2 \cdot \frac{1}{\frac{1}{R} + \frac{1}{R_V}}
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{1}{R} + \frac{1}{R_V} = \frac{A_2}{V_2}
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{1}{R} = \frac{A_2}{V_2} - \frac{1}{R_V}
     \end{equation*}
 
     \begin{equation}\label{eq:equation2}
-    R = \frac{\varepsilon}{A_1} - R_\varepsilon - R_A
+        R = \frac{1}{\frac{A_2}{V_2} - \frac{1}{R_V}}
+    \end{equation}
+
+
+    \newpage
+
+    % Scheme 3:
+    \subsection{Scheme 3}\label{subsec:scheme-3}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme3.png}
+
+    $let~ R_{sum} ~be~ \frac{1}{\frac{1}{R} + \frac{1}{R_V}}$
+
+    \begin{equation*}
+        V = \frac{\varepsilon}{R_\varepsilon + R_{sum}} \cdot R_{sum}
+    \end{equation*}
+
+    \begin{equation*}
+        R_\varepsilon + R_{sum} = R_{sum} \cdot \frac{\varepsilon}{V}
+    \end{equation*}
+
+    \begin{equation*}
+        R_\varepsilon = R_{sum} \cdot \left(\frac{\varepsilon}{V} - 1 \right)
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{1}{\frac{1}{R} + \frac{1}{R_V}} = R_{sum} = \frac{R_\varepsilon}{\left(\frac{\varepsilon}{V} - 1 \right)}
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{1}{R} + \frac{1}{R_V} = \frac{\left(\frac{\varepsilon}{V} - 1 \right)}{R_\varepsilon}
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{1}{R} = \frac{\left(\frac{\varepsilon}{V} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}
+    \end{equation*}
+
+
+    \begin{equation}\label{eq:equation3}
+        R = \frac{1}{\frac{\left(\frac{\varepsilon}{V} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}}
     \end{equation}
 
 
