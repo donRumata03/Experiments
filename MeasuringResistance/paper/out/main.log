@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.3)  3 OCT 2020 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.3)  3 OCT 2020 21:31
 entering extended mode
 **./main.tex
 (main.tex
@@ -963,56 +963,84 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 ABD: EveryShipout initializing macros [1
 
 {C:/Users/Vova/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(D:/Projects\Experiments\MeasuringResistance\paper\out\main.toc) [1] [2]
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+[1] [2]
 Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
 
-<../schemes/Scheme1.png, id=94, 476.0184pt x 176.0979pt>
+<../schemes/Scheme1.png, id=79, 476.0184pt x 176.0979pt>
 File: ../schemes/Scheme1.png Graphic file (type png)
 <use ../schemes/Scheme1.png>
 Package pdftex.def Info: ../schemes/Scheme1.png  used on input line 91.
 (pdftex.def)             Requested size: 369.0pt x 136.51208pt.
 [3] [4 <../schemes/Scheme1.png>]
-<../schemes/Scheme2.png, id=114, 476.0184pt x 263.0628pt>
+<../schemes/Scheme2.png, id=99, 476.0184pt x 263.0628pt>
 File: ../schemes/Scheme2.png Graphic file (type png)
 <use ../schemes/Scheme2.png>
 Package pdftex.def Info: ../schemes/Scheme2.png  used on input line 108.
 (pdftex.def)             Requested size: 369.0pt x 203.92775pt.
  [5 <../schemes/Scheme2.png>]
-<../schemes/Scheme3.png, id=122, 476.0184pt x 292.2117pt>
+<../schemes/Scheme3.png, id=107, 476.0184pt x 292.2117pt>
 File: ../schemes/Scheme3.png Graphic file (type png)
 <use ../schemes/Scheme3.png>
 Package pdftex.def Info: ../schemes/Scheme3.png  used on input line 136.
 (pdftex.def)             Requested size: 369.0pt x 226.52414pt.
  [6 <../schemes/Scheme3.png>]
-<../schemes/Scheme4.png, id=132, 476.0184pt x 261.1356pt>
+<../schemes/Scheme4.png, id=117, 476.0184pt x 261.1356pt>
 File: ../schemes/Scheme4.png Graphic file (type png)
 <use ../schemes/Scheme4.png>
 Package pdftex.def Info: ../schemes/Scheme4.png  used on input line 169.
 (pdftex.def)             Requested size: 369.0pt x 202.43376pt.
- (../../../!LatexTemplates/low_random_dispersion.tex)
+ [7 <../schemes/Scheme4.png>]
+<../schemes/Scheme5.png, id=124, 476.0184pt x 261.3765pt>
+File: ../schemes/Scheme5.png Graphic file (type png)
+<use ../schemes/Scheme5.png>
+Package pdftex.def Info: ../schemes/Scheme5.png  used on input line 188.
+(pdftex.def)             Requested size: 369.0pt x 202.62051pt.
+
+(../../../!LatexTemplates/low_random_dispersion.tex)
+
+LaTeX Warning: Reference `itm:low-dispersion' on page 8 undefined on input line
+ 212.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <../schemes/Scheme4.png>] [8]
+ [8 <../schemes/Scheme5.png>] [9]
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
 
 (D:/Projects\Experiments\MeasuringResistance\paper\out\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8BB45D48238F6CD91CC9F57E979EA9E5;833.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 8BB45D48238F6CD91CC9F57E979EA9E5;833
+(rerunfilecheck)             After:  16292D9CF87B96B9B752C2A40B5649FA;889.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 21658 strings out of 481199
- 421034 string characters out of 2913476
- 692733 words of memory out of 3000000
- 36829 multiletter control sequences out of 15000+200000
+ 21667 strings out of 481199
+ 421111 string characters out of 2913476
+ 691781 words of memory out of 3000000
+ 36836 multiletter control sequences out of 15000+200000
  543768 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,76p,407b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1032,9 +1060,9 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 Output written on D:/Projects\Experiments\MeasuringResistance\paper\out\main.pd
-f (9 pages, 307099 bytes).
+f (10 pages, 338452 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
