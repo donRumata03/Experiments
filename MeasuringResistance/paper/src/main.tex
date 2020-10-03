@@ -10,7 +10,8 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{setspace}
-\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{import}
 
 \usetikzlibrary{circuits}
 \usetikzlibrary{circuits.ee}
@@ -43,45 +44,64 @@
     \begin{vplace}
     \begin{center}
 
-\section{Abstract}\label{sec:abstract}
-        It tends to be pretty difficult and obviously not convenient to perform measurements using voltage and current sensors whose impedance is comparable with the impedance of resistor itself.\newline
-        That's why it makes sense to apply optimization methods to improve accuracy.\newline
-        So, we've constructed all the possible schemes and proved, that there aren't any other reasonable schemes can be constructed using the given set of instruments.\newline
-        Finally, we've extracted all the data from those schemes.\newline
+    \section{Abstract}\label{sec:abstract}
+            It tends to be pretty difficult and obviously not convenient to perform measurements using voltage and current sensors whose impedance is comparable with the impedance of resistor itself.\newline
+            That's why it makes sense to apply optimization methods to improve accuracy.\newline
+            So, we've constructed all the possible schemes and proved, that there aren't any other reasonable schemes can be constructed using the given set of instruments.\newline
+            Finally, we've extracted all the data from those schemes.\newline
 
     \end{center}
     \end{vplace}
 
     \newpage
 
-\section{The Plan}\label{sec:the-plan}
-    The task is to measure the impedance of the given resistor as precise as possible.\newline
-    To achieve this aim, we decided to perform these operations:\newline
+    \section{The Plan}\label{sec:the-plan}
+        The task is to measure the impedance of the given resistor as precise as possible.\newline
+        To achieve this aim, we decided to perform these operations:\newline
 
-    \begin{itemize}
-        \item Compute the resistance and its dispersion individually for each scheme
-        \item Deduct which scheme's results stand out from the center ($\mu$), for example, the threshold value of remoteness from the center might be equal to $2 \cdot \sigma$
-        \item Dropout the data outliers (outstanding measurements)
-        \item For those verified measurements we use them to construct an equation system.
-        \item Optimize the function which is ${\sum_{i=0}^{i<n_{equations}} (EQ_{i_{left}} - EQ_{i_{right}}) ^ 2}$\newline
-            where $EQ_{i_{left}}$ and $EQ_{i_{right}}$ are left and right sides of $i^{th}$ equation respectively
-        \item As the result, we'll find the resultant resistance.\newline
-        Obviously, the target function won't be equal to zero because we have 8 equations and only one variable, but the accuracy of the result will be significantly better than all the initial results.
-        \item Thus, the final result should be definitely found this way.
-    \end{itemize}
+        \begin{itemize}
+            \item Compute the resistance and its dispersion individually for each scheme
+            \item Deduct which scheme's results stand out from the center ($\mu$), for example, the threshold value of remoteness from the center might be equal to $2 \cdot \sigma$
+            \item Dropout the data outliers (outstanding measurements)
+            \item For those verified measurements we use them to construct an equation system.
+            \item Optimize the function which is ${\sum_{i=0}^{i<n_{equations}} \left(EQ_{i_{left}} - EQ_{i_{right}}\right) ^ 2}$\newline
+                where $EQ_{i_{left}}$ and $EQ_{i_{right}}$ are left and right sides of $i^{th}$ equation respectively
+            \item \label{itm:low-dispersion} As the result, we'll find the resultant resistance.\newline
+            Obviously, the target function won't be equal to zero because we have 8 equations and only one variable, but the accuracy of the result will be significantly better than it is for all the initial results.
+            \item Thus, the final result should be definitely found this way.
+        \end{itemize}
 
-\section{Schemes & Equations}\label{sec:schemes-&-equations}
-    There are only 8 \textit{\textbf{reasonable}} schemes can be assembled using these items:
-    \begin{itemize}
-        \item Exactly one battery
-        \item Exactly one resistor to measure
-        \item Not more than one amperemeter
-        \item Not more than one voltmeter
-    \end{itemize}
+    \section{Schemes and Equations}\label{sec:schemes-and-equations}
+        There are only 8 \textit{\textbf{reasonable}} schemes can be assembled using these items:
+        \begin{itemize}
+            \item Exactly one battery
+            \item Exactly one resistor to measure
+            \item Not more than one amperemeter
+            \item Not more than one voltmeter
+        \end{itemize}
 
-    Here are the schemes:
+        Here are the schemes:
 
-    \subsection{Scheme 1}\label{subsec:scheme-1}
+        \subsection{Scheme 1}\label{subsec:scheme-1}
+
+
+
+
+    \section {Dispersion}\label{sec:dispersion}
+        \input{../../../!LatexTemplates/low_random_dispersion.tex}\newline
+        As mentioned above (\ref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.
+
+    \section{Measurement Results}\label{sec:measurement-results}
+
+    \section {Looking for Data Outliers}\label{sec:looking-for-data-outliers}
+
+    \section{Optimizing the Target Function}\label{sec:optimizing-the-target-function}
+
+
+    \section{The Answer}\label{sec:answer}
+
+
+    \section{Conclusion}\label{sec:conclusion}
 
 
 
