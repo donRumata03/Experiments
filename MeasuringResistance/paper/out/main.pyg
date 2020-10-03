@@ -1,0 +1,3 @@
+            inline void some_func() {
+                printf("Hello, world!");
+            }

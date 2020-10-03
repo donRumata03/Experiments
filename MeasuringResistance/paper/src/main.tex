@@ -12,6 +12,8 @@
 \usepackage{setspace}
 \usepackage{tikz}
 \usepackage{import}
+% \usepackage{pygmentize}
+% \usepackage{minted}
 
 \usetikzlibrary{circuits}
 \usetikzlibrary{circuits.ee}
@@ -26,8 +28,8 @@
 
 % Document
 \begin{document}
-
-    \setsecnumdepth{subsection}
+    \maxtocdepth{subsection}
+    % \setsecnumdepth{subsection}
     \renewcommand{\thesection}{\arabic{section}}
     \pagenumbering{gobble}
     % \thispagestyle{empty}
@@ -82,14 +84,46 @@
 
         Here are the schemes:
 
-        \subsection{Scheme 1}\label{subsec:scheme-1}
+    % Scheme 1
+    \subsection{Scheme 1}\label{subsec:scheme-1}
+
+            \includegraphics[width=\linewidth]{../schemes/Scheme1.png}
+
+            \begin{equation*}
+                A = \frac{\varepsilon}{R_\varepsilon + R_A + R}
+            \end{equation*}
+
+            \begin{equation}\label{eq:equation1}
+                R = \frac{\varepsilon}{A_1} - R_\varepsilon - R_A
+            \end{equation}
+
+    \newpage
+
+    % Scheme 2:
+    \subsection{Scheme 2}\label{subsec:scheme-2}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme2.png}
+
+    \begin{equation*}
+        A = \frac{\varepsilon}{R_\varepsilon + R_A + \frac{1}{\frac{1}{R} + \frac{1}{R_V}}}
+    \end{equation*}
+
+    \begin{equation}\label{eq:equation2}
+    R = \frac{\varepsilon}{A_1} - R_\varepsilon - R_A
+    \end{equation}
 
 
-
+%
+%        \begin{minted}[linenos]{c}
+%            inline void some_func() {
+%                printf("Hello, world!");
+%            }
+%        \end{minted}
+%
 
     \section {Dispersion}\label{sec:dispersion}
         \input{../../../!LatexTemplates/low_random_dispersion.tex}\newline
-        As mentioned above (\ref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.
+        As mentioned above (\nameref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.
 
     \section{Measurement Results}\label{sec:measurement-results}
 
