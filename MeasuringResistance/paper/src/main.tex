@@ -37,19 +37,11 @@
     \begin{vplace}
     \begin{center}
 
-    \section{Abstract}\label{sec:abstract}
+\section{Abstract}\label{sec:abstract}
         It tends to be pretty difficult and obviously not convenient to perform measurements using voltage and current sensors whose impedance is comparable with the impedance of resistor itself.\newline
         That's why it makes sense to apply optimization methods to improve accuracy.\newline
         So, we've constructed all the possible schemes and proved, that there aren't any other reasonable schemes can be constructed using the given set of instruments.\newline
         Finally, we've extracted all the data from those schemes.\newline
-        The task is to measure the impedance of the given resistor as precise as possible.\newline
-        To achieve this aim, we decided to perform these operations:\newline
-
-        \begin{enumerate}
-            \item Compute the resistance and its dispersion individually for each scheme
-            \item Deduct which scheme's results stand out from the center (\mu), for example - the threshold value of remoteness from the center might be equal to $2 \cdot \sigma$
-            \item Compute 
-        \end{enumerate}
 
     \end{center}
     \end{vplace}
@@ -57,6 +49,23 @@
     \section{}
 
     \newpage
+
+\section{The Plan}\label{sec:the-plan}
+    The task is to measure the impedance of the given resistor as precise as possible.\newline
+    To achieve this aim, we decided to perform these operations:\newline
+
+    \begin{enumerate}
+        \item Compute the resistance and its dispersion individually for each scheme
+        \item Deduct which scheme's results stand out from the center ($\mu$), for example, the threshold value of remoteness from the center might be equal to $2 \cdot \sigma$
+        \item Dropout the data outliers (outstanding measurements)
+        \item For those verified measurements we use them to construct an equation system.
+        \item Optimize the function which is ${\sum_{i=0}^{i<n_{equations}} (EQ_{i_{left}} - EQ_{i_{right}}) ^ 2}$\newline
+            where $EQ_{i_{left}}$ and $EQ_{i_{right}}$ are left and right sides of $i^{th}$ equation respectively
+        \item As the result, we'll find the resultant resistance.\newline
+        Obviously, the target function won't be equal to zero because we have 8 equations and only one variable, but the accuracy of the result will be significantly better than all of the initial results.
+        \item Thus 
+    \end{enumerate}
+
 
 %    \begin{figure}[h!]
 %        \begin{center}
