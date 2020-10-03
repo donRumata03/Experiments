@@ -138,33 +138,47 @@
     $let~ R_{sum} ~be~ \frac{1}{\frac{1}{R} + \frac{1}{R_V}}$
 
     \begin{equation*}
-        V = \frac{\varepsilon}{R_\varepsilon + R_{sum}} \cdot R_{sum}
+        V_3 = \frac{\varepsilon}{R_\varepsilon + R_{sum}} \cdot R_{sum}
     \end{equation*}
-
     \begin{equation*}
-        R_\varepsilon + R_{sum} = R_{sum} \cdot \frac{\varepsilon}{V}
+        R_\varepsilon + R_{sum} = R_{sum} \cdot \frac{\varepsilon}{V_3}
     \end{equation*}
-
     \begin{equation*}
-        R_\varepsilon = R_{sum} \cdot \left(\frac{\varepsilon}{V} - 1 \right)
+        R_\varepsilon = R_{sum} \cdot \left(\frac{\varepsilon}{V_3} - 1 \right)
     \end{equation*}
-
     \begin{equation*}
-        \frac{1}{\frac{1}{R} + \frac{1}{R_V}} = R_{sum} = \frac{R_\varepsilon}{\left(\frac{\varepsilon}{V} - 1 \right)}
+        \frac{1}{\frac{1}{R} + \frac{1}{R_V}} = R_{sum} = \frac{R_\varepsilon}{\left(\frac{\varepsilon}{V_3} - 1 \right)}
     \end{equation*}
-
     \begin{equation*}
-        \frac{1}{R} + \frac{1}{R_V} = \frac{\left(\frac{\varepsilon}{V} - 1 \right)}{R_\varepsilon}
+        \frac{1}{R} + \frac{1}{R_V} = \frac{\left(\frac{\varepsilon}{V_3} - 1 \right)}{R_\varepsilon}
     \end{equation*}
-
     \begin{equation*}
-        \frac{1}{R} = \frac{\left(\frac{\varepsilon}{V} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}
+        \frac{1}{R} = \frac{\left(\frac{\varepsilon}{V_3} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}
     \end{equation*}
 
 
     \begin{equation}\label{eq:equation3}
-        R = \frac{1}{\frac{\left(\frac{\varepsilon}{V} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}}
+        R = \frac{1}{\frac{\left(\frac{\varepsilon}{V_3} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}}
     \end{equation}
+
+    \newpage
+
+    % Scheme 4:
+    \subsection{Scheme 4}\label{subsec:scheme-4}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme4.png}
+
+    \begin{equation*}
+        V_4 = \varepsilon \cdot \frac{R_V}{R_\varepsilon + R + R_V}
+    \end{equation*}
+    \begin{equation*}
+        R_\varepsilon + R + R_V = R_V \cdot \frac{\varepsilon}{V_4}
+    \end{equation*}
+
+    \begin{equation}\label{eq:equation4}
+        R = R_V \cdot \frac{\varepsilon}{V_4} - R_\varepsilon - R_V
+    \end{equation}
+
 
 
 %
