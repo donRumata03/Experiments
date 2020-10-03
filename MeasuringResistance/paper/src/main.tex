@@ -240,46 +240,89 @@
 %        \end{minted}
 %
 
-    \section {Dispersion}\label{sec:dispersion}
-        \input{../../../!LatexTemplates/low_random_dispersion.tex}\newline
-        As mentioned above (\nameref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.
-
-    \section{Measurement Results}\label{sec:measurement-results}
+    \newpage
+    \section{Measurement Results}\label{sec:measurement-results} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     Here they are:
 
     % First Measurement:
     \begin{equation*}
+        \nameref{subsec:scheme-1}: ~
         A_1 = \left( 0.98 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
     \end{equation*}
-
     % Second Measurement:
     \begin{equation*}
+        \nameref{subsec:scheme-2}: ~
         V_2 = \left( 1.5 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
     \end{equation*}
     \begin{equation*}
-        A_2 = \left( 1.1 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+        A_2 = \left( 1.10 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
     \end{equation*}
 
     % Third Measurement:
     \begin{equation*}
-        V_2 = \left( 1.5 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+        \nameref{subsec:scheme-3}: ~
+        V_3 = \left( 2.0 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+
+    % Fourth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-4}: ~
+        V_4 = \left( 2.6 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+
+    % Fifth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-5}: ~
+        V_5 = \left( 2.2 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
     \end{equation*}
     \begin{equation*}
-        A_2 = \left( 1.1 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+        A_5 = \left( 0.50 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Sixth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-6}: ~
+        A_6 = \left( 1.30 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Seventh Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-7}: ~
+        V_7 = \left( 3.0 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_7 = \left( 0.40 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Eighth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-8}: ~
+        V_8 = \left( 1.0 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_8 = \left( 1.20 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
     \end{equation*}
 
 
-
-
+    \newpage
     \section {Looking for Data Outliers}\label{sec:looking-for-data-outliers}
 
+    \newpage
+    \section {Initial Dispersions}\label{sec:initial-dispersions}
+    \input{../../../!LatexTemplates/low_random_dispersion.tex}\newline
+    As mentioned above (\nameref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.\newline
+    To estimate the dispersions of \"R\"s, I'll use that library from \newline
+    \url{https://github.com/sitandr/dispersion_counter}\newline
+
+
+    \newpage
     \section{Optimizing the Target Function}\label{sec:optimizing-the-target-function}
 
-
+    \newpage
     \section{The Answer}\label{sec:answer}
 
-
+    \newpage
     \section{Conclusion}\label{sec:conclusion}
 
 
