@@ -2,6 +2,12 @@ import sys
 sys.path.append("../../dispersion_lib")
 from dispersion.dispersion import *
 
+# Device parameters (from the previous experiment):
+eps = 7.8 	# Volts
+R_v = 697.	# Ohm
+R_e = 749.	# Ohm
+R_a = 200.	# Ohm
+
 
 def convert_current(measured_current):
 	return measured_current * (15.8 / 2000)
