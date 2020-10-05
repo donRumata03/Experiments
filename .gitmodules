@@ -7,3 +7,6 @@
 [submodule "dispersion_lib"]
 	path = dispersion_lib
 	url = https://github.com/sitandr/dispersion_counter
+[submodule "CodeObserver"]
+	path = CodeObserver
+	url = https://github.com/donRumata03/CodeObserver
