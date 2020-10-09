@@ -20,7 +20,7 @@ print(f"R4 dummyly: {dummy_R4}")
 print(f"R5 dummyly: {dummy_R5}")
 
 # Collect all the Rs in one place:
-all_resistances = [
+all_resistances_with_dispersion = [
 	dummy_R1,
 	dummy_R2,
 	dummy_R3,
@@ -30,3 +30,14 @@ all_resistances = [
 	# dummy_R7,
 	# dummy_R8,
 ]
+
+all_resistance_values = []
+all_resistance_dispersions = []
+
+for r in all_resistances_with_dispersion:
+	all_resistance_values.append(r.value)
+	all_resistance_dispersions.append(r.dispersion)
+
+# print("Values: ", all_resistance_values)
+# print("Dispersions: ", all_resistance_dispersions)
+
