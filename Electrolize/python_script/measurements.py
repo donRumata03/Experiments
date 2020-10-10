@@ -1,8 +1,8 @@
 m_catode_0 = 8.90 / 1000. # Was in grams
-m_catode_1 = ? / 1000. # 
+m_catode_1 = 9.29 / 1000. # 
 
 m_anode_0 = 36.49 / 1000. # 
-m_anode_1 = ? / 1000. # 
+m_anode_1 = 35.96 / 1000. # 
 
 my_current_time_dependency = [ # (Sec; time)
 	( 0, 	0.98 ),
