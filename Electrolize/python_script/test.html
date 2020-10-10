@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="file:///home/vova/.markdownNavigator/multimarkdown_layout-fx.css">
+<style>
+.container { width: 100%; }
+.wiki-container { width: 100%; }
+.wiki-body { width: 100%; }
+</style>
+<link rel="stylesheet" href="file:///home/vova/.markdownNavigator/multimarkdown_darcula-fx.css">
+<link rel="stylesheet" href="file:///home/vova/.markdownNavigator/multimarkdown_hljs-darcula.css">
+<title>Trees.md</title>
+<script src="file:///home/vova/.markdownNavigator/multimarkdown_highlight.pack.js"></script>
+</head>
+<body>
+<article class="markdown-body">
+<h1 id="Деревья" md-pos="0-9"><span md-pos="2-9">Деревья</span></h1>
+<p md-pos="11-45"><span md-pos="11-44">Дерево - связный граф без циклов.</span></p>
+<p md-pos="46-61"><span md-pos="46-60">Есть 3 пункта:</span></p>
+<ul>
+  <li md-pos="62-72"><span md-pos="64-71">Связный</span></li>
+  <li md-pos="72-85"><span md-pos="74-84">Без циклов</span></li>
+  <li md-pos="85-101"><span md-pos="87-100">|E| = |V| + 1</span></li>
+</ul>
+<p md-pos="102-141"><span md-pos="102-140">Достаточно выполнения любых 2х из них.</span></p>
+<p md-pos="142-168"><span md-pos="142-167">|V| = 1 &lt;=&gt; Это т.н. пень</span></p>
+<h3 id="Теорема" md-pos="169-181"><span md-pos="173-181">Теорема:</span></h3>
+<p md-pos="182-251"><span md-pos="182-250">При |V| существуют хотя бы две висячие вершиины (Вершины степени 1).</span></p>
+<h3 id="Доказательство" md-pos="252-271"><span md-pos="256-271">Доказательство:</span></h3>
+<p md-pos="272-293"><span md-pos="272-292">Берём любую вершину.</span></p>
+<ol>
+  <li md-pos="293-330"><span md-pos="296-329">Не изолированная, иначе не дерево</span></li>
+  <li md-pos="330-449"><span md-pos="333-448">Идём пока можем. Мы каждый раз приходим новую вершину, так как нет циклов, следовательно, когда-то прийдём в конец.</span></li>
+  <li md-pos="449-487"><span md-pos="452-486">Потом опять назад, получим вторую.</span></li>
+  <li md-pos="487-494"><span md-pos="490-493">Что</span></li>
+  <li md-pos="494-584"><span md-pos="497-583">Для любого N всегда найдётся дерево с только 2мя висячими вершинами. Например, бамбук.</span></li>
+</ol>
+<h1 id="Докажем-что-e--v--1" md-pos="585-613"><span md-pos="587-613">Докажем, что |E| = |V| + 1</span></h1>
+<p md-pos="614-716"><span md-pos="614-625">По индукци.</span>
+<span md-pos="626-646">База очевидна: пень.</span>
+<span md-pos="647-715">Докажем, что при добавлении вершины вседа появится ровно одно ребро.</span></p>
+<ul>
+  <li md-pos="716-767"><span md-pos="718-766">Связность остаётся, если убрать висячую вершину.</span></li>
+  <li md-pos="767-827"><span md-pos="769-826">Уберём висячую вершину: она есть. Связность не нарушится.</span></li>
+  <li md-pos="827-909"><span md-pos="829-908">Пока есть цикл: убираем вершину. Получаем дерево, с меньшим количеством вершин.</span></li>
+  <li md-pos="909-924"><span md-pos="911-923">Противоречие</span></li>
+</ul>
+<p md-pos="925-1053"><span md-pos="925-1052">От противного доказываем, что несвязный граф не может быть деревом, добавляя рёбра и получая нужное соотношение рёбер и вершин.</span></p>
+<p md-pos="1054-1126"><span md-pos="1054-1125">Но получится лес: граф без циклов. (при соединении нескольких деревьев)</span></p>
+<p md-pos="1127-1232"><span md-pos="1127-1163"><em><strong>Полезная фраза в теории графов</strong></em></span>
+<span md-pos="1164-1231">Если убрать вершину из цикла, граф остался связным. (Если вершина )</span></p>
+<p md-pos="1233-1263"><span md-pos="1233-1262">Просто граф без циклов - лес.</span></p>
+<p md-pos="1264-1505"><span md-pos="1264-1279">Выделим корень.</span>
+<span md-pos="1280-1308">Дети - непосредственно ниже.</span>
+<span md-pos="1309-1335">Родитель - непосредственно</span>
+<span md-pos="1336-1360">Предки - линия до корня.</span>
+<span md-pos="1361-1405">Потомки - всё дерево, подвешенное к вершине.</span>
+<span md-pos="1406-1425">Лист - без потомков</span>
+<span md-pos="1426-1457">Висячая вершина - со степенью 1</span>
+<span md-pos="1458-1504">Корень - может быть висячей вершиной, если там</span></p>
+<h1 id="Хранение-деревьев" md-pos="1506-1525"><span md-pos="1508-1525">Хранение деревьев</span></h1>
+<p md-pos="1526-1666"><span md-pos="1526-1567">Рёбер немного (V ~ E^1 (E - 1), а не E^2)</span>
+<span md-pos="1568-1619">Храним списки детей: Kids[vert] = [v1, v2, ...]</span>
+<span md-pos="1620-1665">Родители длякаждой вершины используется реже.</span></p>
+<h1 id="Динамическое-программирование-с-деревьями" md-pos="1668-1711"><span md-pos="1670-1711">Динамическое программирование с деревьями</span></h1>
+<p md-pos="1712-1890"><span md-pos="1712-1769">Диаметр - масимальное из расстояний между точками фигуры.</span>
+<span md-pos="1770-1824">Димаетр человеческого графа знакомств равен примерно 6</span>
+<span md-pos="1829-1843">n = 7000000000</span>
+<span md-pos="1848-1889">&gt;&gt;&gt; math.log(n) / (math.log(math.log(n)))</span></p>
+<pre md-pos="1895-2015"><code class="nohighlight" md-pos="1895-2015">def dfs(v):
+    h\[v\] = 0
+    for u in дети v:
+        dfs(u)
+        h\[v\] = max(h\[v\], h\[u\] + 1)
+</code></pre>
+<p md-pos="2018-2040"><span md-pos="2018-2025">Запуск:</span>
+<span md-pos="2030-2039">dfs(root)</span></p>
+<p md-pos="2041-2077"><span md-pos="2041-2073"><em><strong>Можно передавать dfs(u, prev)</strong></em></span></p>
+</article>
+<script>hljs.initHighlightingOnLoad();</script></body>
+</html>
