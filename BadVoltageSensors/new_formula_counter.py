@@ -1,6 +1,6 @@
 import sys
-sys.path.append("./dispersion_lib")
-from dispersion_lib.dispersion.dispersion import *
+sys.path.append("../dispersion_lib")
+from dispersion.dispersion import *
 
 
 def convert_current(measured_current):

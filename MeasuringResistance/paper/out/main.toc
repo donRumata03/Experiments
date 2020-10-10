@@ -1,3 +1,16 @@
 \contentsline {chapter}{Contents}{1}{section*.1}%
 \contentsline {section}{\numberline {1}Abstract}{2}{section.0.1}%
 \contentsline {section}{\numberline {2}The Plan}{3}{section.0.2}%
+\contentsline {section}{\numberline {3}Schemes and Equations}{3}{section.0.3}%
+\contentsline {subsection}{Scheme 1}{4}{section*.2}%
+\contentsline {subsection}{Scheme 2}{5}{section*.3}%
+\contentsline {subsection}{Scheme 3}{6}{section*.4}%
+\contentsline {subsection}{Scheme 4}{7}{section*.5}%
+\contentsline {subsection}{Scheme 5}{8}{section*.6}%
+\contentsline {subsection}{Scheme 6}{9}{section*.7}%
+\contentsline {section}{\numberline {4}Measurement Results}{10}{section.0.4}%
+\contentsline {section}{\numberline {5}Looking for Data Outliers}{11}{section.0.5}%
+\contentsline {section}{\numberline {6}Initial Dispersions}{12}{section.0.6}%
+\contentsline {section}{\numberline {7}Optimizing the Target Function}{13}{section.0.7}%
+\contentsline {section}{\numberline {8}The Answer}{14}{section.0.8}%
+\contentsline {section}{\numberline {9}Conclusion}{15}{section.0.9}%

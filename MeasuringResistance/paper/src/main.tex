@@ -10,17 +10,32 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{setspace}
-\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{import}
+% \usepackage{pygmentize}
+% \usepackage{minted}
+
+\usetikzlibrary{circuits}
+\usetikzlibrary{circuits.ee}
+\usetikzlibrary{circuits.ee.IEC}
+\usetikzlibrary{circuits.logic.IEC}
+
 
 \title{\textbf{\Huge{Measuring resistance using non-ideal devices}}}
 \date{03.10.2020}
 \author{Latipov Vladimir \&\& Onishenko Sergiy}
 
 
+\newcommand{\initialCurrentDispersion}{0.03}
+\newcommand{\initialVoltageDispersion}{0.1}
+
+\newcommand{\voltageConvertingFrac}{\frac{6.2}{6}}
+\newcommand{\currentConvertingFrac}{\frac{15.8}{2000}}
+
 % Document
 \begin{document}
-
-    \setsecnumdepth{subsection}
+    \maxtocdepth{subsection}
+    % \setsecnumdepth{subsection}
     \renewcommand{\thesection}{\arabic{section}}
     \pagenumbering{gobble}
     % \thispagestyle{empty}
@@ -37,32 +52,287 @@
     \begin{vplace}
     \begin{center}
 
-\section{Abstract}\label{sec:abstract}
-        It tends to be pretty difficult and obviously not convenient to perform measurements using voltage and current sensors whose impedance is comparable with the impedance of resistor itself.\newline
-        That's why it makes sense to apply optimization methods to improve accuracy.\newline
-        So, we've constructed all of the possible schemes and proved, that there aren't any other reasonable schemes can be constructed using the given set of instruments.\newline
-        Finally, we've extracted all the data from those schemes.\newline
+    \section{Abstract}\label{sec:abstract}
+            It tends to be pretty difficult and obviously not convenient to perform measurements using voltage and current sensors whose impedance is comparable with the impedance of resistor itself.\newline
+            That's why it makes sense to apply optimization methods to improve accuracy.\newline
+            So, we've constructed all the possible schemes and proved, that there aren't any other reasonable schemes can be constructed using the given set of instruments.\newline
+            Finally, we've extracted all the data from those schemes.\newline
 
     \end{center}
     \end{vplace}
 
     \newpage
 
-\section{The Plan}\label{sec:the-plan}
-    The task is to measure the impedance of the given resistor as precise as possible.\newline
-    To achieve this aim, we decided to perform these operations:\newline
+    \section{The Plan}\label{sec:the-plan}
+        The task is to measure the impedance of the given resistor as precise as possible.\newline
+        To achieve this aim, we decided to perform these operations:\newline
 
-    \begin{enumerate}
-        \item Compute the resistance and its dispersion individually for each scheme
-        \item Deduct which scheme's results stand out from the center ($\mu$), for example, the threshold value of remoteness from the center might be equal to $2 \cdot \sigma$
-        \item Dropout the data outliers (outstanding measurements)
-        \item For those verified measurements we use them to construct an equation system.
-        \item Optimize the function which is ${\sum_{i=0}^{i<n_{equations}} (EQ_{i_{left}} - EQ_{i_{right}}) ^ 2}$\newline
-            where $EQ_{i_{left}}$ and $EQ_{i_{right}}$ are left and right sides of $i^{th}$ equation respectively
-        \item As the result, we'll find the resultant resistance.\newline
-        Obviously, the target function won't be equal to zero because we have 8 equations and only one variable, but the accuracy of the result will be significantly better than all of the initial results.
-        \item Thus 
-    \end{enumerate}
+        \begin{itemize}
+            \item Compute the resistance and its dispersion individually for each scheme
+            \item Deduct which scheme's results stand out from the center ($\mu$), for example, the threshold value of remoteness from the center might be equal to $2 \cdot \sigma$
+            \item Dropout the data outliers (outstanding measurements)
+            \item For those verified measurements we use them to construct an equation system.
+            \item Optimize the function which is ${\sum_{i=0}^{i<n_{equations}} \left(EQ_{i_{left}} - EQ_{i_{right}}\right) ^ 2}$\newline
+                where $EQ_{i_{left}}$ and $EQ_{i_{right}}$ are left and right sides of $i^{th}$ equation respectively
+            \item \label{itm:low-dispersion} As the result, we'll find the resultant resistance.\newline
+            Obviously, the target function won't be equal to zero because we have 8 equations and only one variable, but the accuracy of the result will be significantly better than it is for all the initial results.
+            \item Thus, the final result should be definitely found this way.
+        \end{itemize}
+
+    \section{Schemes and Equations}\label{sec:schemes-and-equations}
+        There are only 8 \textit{\textbf{reasonable}} schemes can be assembled using these items:
+        \begin{itemize}
+            \item Exactly one battery
+            \item Exactly one resistor to measure
+            \item Not more than one amperemeter
+            \item Not more than one voltmeter
+        \end{itemize}
+
+        Here are the schemes:
+
+    % Scheme 1
+
+    \begin{center}
+    \subsection{Scheme 1}\label{subsec:scheme-1}
+        \includegraphics[width=\linewidth]{../schemes/Scheme1.png}
+
+            \begin{equation*}
+                A = \frac{\varepsilon}{R_\varepsilon + R_A + R}
+            \end{equation*}
+
+            \begin{equation}\label{eq:equation1}
+                R = \frac{\varepsilon}{A_1} - R_\varepsilon - R_A
+            \end{equation}
+    \end{center}
+
+
+    \newpage
+
+    % Scheme 2:
+    \subsection{Scheme 2}\label{subsec:scheme-2}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme2.png}
+
+    \begin{equation*}
+        A_2 = \frac{\varepsilon}{R_\varepsilon + R_A + \frac{1}{\frac{1}{R} + \frac{1}{R_V}}}
+    \end{equation*}
+
+    \begin{equation*}
+        V_2 = A_2 \cdot \frac{1}{\frac{1}{R} + \frac{1}{R_V}}
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{1}{R} + \frac{1}{R_V} = \frac{A_2}{V_2}
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{1}{R} = \frac{A_2}{V_2} - \frac{1}{R_V}
+    \end{equation*}
+
+    \begin{equation}\label{eq:equation2}
+        R = \frac{1}{\frac{A_2}{V_2} - \frac{1}{R_V}}
+    \end{equation}
+
+
+    \newpage
+
+    % Scheme 3:
+    \subsection{Scheme 3}\label{subsec:scheme-3}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme3.png}
+
+    $let~ R_{sum} ~be~ \frac{1}{\frac{1}{R} + \frac{1}{R_V}}$
+
+    \begin{equation*}
+        V_3 = \frac{\varepsilon}{R_\varepsilon + R_{sum}} \cdot R_{sum}
+    \end{equation*}
+    \begin{equation*}
+        R_\varepsilon + R_{sum} = R_{sum} \cdot \frac{\varepsilon}{V_3}
+    \end{equation*}
+    \begin{equation*}
+        R_\varepsilon = R_{sum} \cdot \left(\frac{\varepsilon}{V_3} - 1 \right)
+    \end{equation*}
+    \begin{equation*}
+        \frac{1}{\frac{1}{R} + \frac{1}{R_V}} = R_{sum} = \frac{R_\varepsilon}{\left(\frac{\varepsilon}{V_3} - 1 \right)}
+    \end{equation*}
+    \begin{equation*}
+        \frac{1}{R} + \frac{1}{R_V} = \frac{\left(\frac{\varepsilon}{V_3} - 1 \right)}{R_\varepsilon}
+    \end{equation*}
+    \begin{equation*}
+        \frac{1}{R} = \frac{\left(\frac{\varepsilon}{V_3} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}
+    \end{equation*}
+
+
+    \begin{equation}\label{eq:equation3}
+        R = \frac{1}{\frac{\left(\frac{\varepsilon}{V_3} - 1 \right)}{R_\varepsilon} -  \frac{1}{R_V}}
+    \end{equation}
+
+    \newpage
+
+    % Scheme 4:
+    \subsection{Scheme 4}\label{subsec:scheme-4}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme4.png}
+
+    \begin{equation*}
+        V_4 = \varepsilon \cdot \frac{R_V}{R_\varepsilon + R + R_V}
+    \end{equation*}
+    \begin{equation*}
+        R_\varepsilon + R + R_V = R_V \cdot \frac{\varepsilon}{V_4}
+    \end{equation*}
+
+    \begin{equation}\label{eq:equation4}
+        R = R_V \cdot \frac{\varepsilon}{V_4} - R_\varepsilon - R_V
+    \end{equation}
+
+
+    \newpage
+
+    % Scheme 5:
+    \subsection{Scheme 5}\label{subsec:scheme-5}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme5.png}
+
+    \begin{equation*}
+        A_5 = \frac{\varepsilon}{R + R_\varepsilon + R_V + R_A}
+    \end{equation*}
+    \begin{equation*}
+        R + R_\varepsilon + R_V + R_A = \frac{\varepsilon}{A_5}
+    \end{equation*}
+
+    \begin{equation}\label{eq:equation5}
+        R = \frac{\varepsilon}{A_5} - R_\varepsilon - R_V - R_A
+    \end{equation}
+
+    \newpage
+
+    % Scheme 6:
+    \subsection{Scheme 6}\label{subsec:scheme-6}
+
+    \includegraphics[width=\linewidth]{../schemes/Scheme6.png}
+
+    $let~ R_{sum} ~be~ \frac{1}{\frac{1}{R} + \frac{1}{R_A}}$
+
+    \begin{equation*}
+        I_{\varepsilon} = \frac{\varepsilon}{R_{\varepsilon} + R_{sum}}
+    \end{equation*}
+
+    \begin{equation*}
+        U_R = U_{R_A} = \varepsilon - I_{\varepsilon} = \varepsilon - \frac{\varepsilon}{R_{\varepsilon} + R_{sum}}
+        = \varepsilon \cdot \left( 1 - \frac{1}{R_{\varepsilon} + R_{sum}} \right)
+    \end{equation*}
+
+    \begin{equation*}
+        U_{R_A} = R_A \cdot I_{R_A} = R_A \cdot A_6
+    \end{equation*}
+
+    \begin{equation}\label{eq:equation6}
+        R = ?
+    \end{equation}
+
+
+
+%
+%        \begin{minted}[linenos]{c}
+%            inline void some_func() {
+%                printf("Hello, world!");
+%            }
+%        \end{minted}
+%
+
+    \newpage
+    \section{Measurement Results}\label{sec:measurement-results} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Here they are:
+
+    % First Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-1}: ~
+        A_1 = \left( 0.98 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+    % Second Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-2}: ~
+        V_2 = \left( 1.5 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_2 = \left( 1.10 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Third Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-3}: ~
+        V_3 = \left( 2.0 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+
+    % Fourth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-4}: ~
+        V_4 = \left( 2.6 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+
+    % Fifth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-5}: ~
+        V_5 = \left( 2.2 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_5 = \left( 0.50 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Sixth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-6}: ~
+        A_6 = \left( 1.30 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Seventh Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-7}: ~
+        V_7 = \left( 3.0 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_7 = \left( 0.40 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+    % Eighth Measurement:
+    \begin{equation*}
+        \nameref{subsec:scheme-8}: ~
+        V_8 = \left( 1.0 \pm \initialVoltageDispersion \right) \times \voltageConvertingFrac Volts
+    \end{equation*}
+    \begin{equation*}
+        A_8 = \left( 1.20 \pm \initialCurrentDispersion \right) \times \currentConvertingFrac Amperes
+    \end{equation*}
+
+
+    \newpage
+    \section {Looking for Data Outliers}\label{sec:looking-for-data-outliers}
+
+    As mentioned above, there's always a non-zero probability, that some measurements or equation system solvings might be incorrect. \newline
+    So, it makes sense to filter them: the ones, that are out of $n \cdot \varsigma$ from the center to fix that.\newline
+    This graph shows density of R distribution and its dependence on the resistance itself.
+    Here we clearly see, that one of the points doesn't fit to the gap: there's probably a mistake there. \newline
+
+
+    \newpage
+    \section {Initial Dispersions}\label{sec:initial-dispersions}
+    \input{../../../!LatexTemplates/low_random_dispersion.tex}\newline
+    As mentioned above (\nameref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.\newline
+    To estimate the dispersions of \"R\"s, I'll use that library from \newline
+    \url{https://github.com/sitandr/dispersion_counter}\newline
+
+
+    \newpage
+    \section{Optimizing the Target Function}\label{sec:optimizing-the-target-function}
+
+    
+
+    \newpage
+    \section{The Answer}\label{sec:answer}
+
+    \newpage
+    \section{Conclusion}\label{sec:conclusion}
+
 
 
 %    \begin{figure}[h!]
