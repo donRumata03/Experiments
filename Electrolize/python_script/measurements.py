@@ -1,3 +1,5 @@
+
+
 m_catode_0 = 8.90 / 1000. # Was in grams
 m_catode_1 = 9.29 / 1000. # 
 
@@ -44,4 +46,5 @@ raw_goshas_current_time_dependency = [ # (Sec; time)
 goshas_current_time_dependency = [ (v[0] + goshas_time_shift, v[1])  \
 								for v in raw_goshas_current_time_dependency]
 
+all_time_current_points = sorted(my_current_time_dependency + goshas_current_time_dependency)
 
