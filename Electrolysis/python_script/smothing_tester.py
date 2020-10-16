@@ -22,18 +22,19 @@ print("Area under smoothed curve:", count_graph_area(smoothed_current_time_depen
 print("Area under linearly approximated curve:", count_graph_area(zip([i[0] for i in current_time_dependency], linearly_approximated_current_time_dependency)))
 
 
+if __name__ == '__main__':
+	# Plotting parameters:
+	plt.ylim(0, max([i[1] for i in current_time_dependency]) * 1.1)
+	plt.xlabel("t, sec")
+	plt.ylabel("I, A")
+	plt.title("Current vs. Time dependency")
 
-# Plotting parameters:
-plt.ylim(0, max([i[1] for i in current_time_dependency]) * 1.1)
-plt.xlabel("t, sec")
-plt.ylabel("I, A")
-plt.title("Current vs. Time dependency")
+	# Plots:
+	plt.scatter([i[0] for i in current_time_dependency], [i[1] for i in current_time_dependency], label = "Original graph")
+	plt.plot([i[0] for i in smoothed_current_time_dependency], [i[1] for i in smoothed_current_time_dependency], label = "Smoothed graph")
+	plt.plot([i[0] for i in current_time_dependency], linearly_approximated_current_time_dependency, label = "Linearly approximated graph")
 
-# Plots:
-plt.scatter([i[0] for i in current_time_dependency], [i[1] for i in current_time_dependency], label = "Original graph")
-plt.plot([i[0] for i in smoothed_current_time_dependency], [i[1] for i in smoothed_current_time_dependency], label = "Smoothed graph")
-plt.plot([i[0] for i in current_time_dependency], linearly_approximated_current_time_dependency, label = "Linearly approximated graph")
-
-plt.legend()
-plt.show()
+	# Run:
+	plt.legend()
+	plt.show()
 
