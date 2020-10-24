@@ -12,6 +12,7 @@
 \usepackage{setspace}
 \usepackage{tikz}
 \usepackage{import}
+\usepackage{breqn}
 % \usepackage{pygmentize}
 % \usepackage{minted}
 
@@ -97,7 +98,7 @@
         \includegraphics[width=\linewidth]{../schemes/Scheme1.png}
 
             \begin{equation*}
-                A = \frac{\varepsilon}{R_\varepsilon + R_A + R}
+                A_1 = \frac{\varepsilon}{R_\varepsilon + R_A + R}
             \end{equation*}
 
             \begin{equation}\label{eq:equation1}
@@ -227,9 +228,24 @@
     \end{equation*}
 
     \begin{equation}\label{eq:equation6}
-        R = ?
+        R = ... TOO LONG TO COUNT
     \end{equation}
 
+    \newpage
+
+    % Scheme 7:
+    \subsection{Scheme 7}\label{subsec:scheme-7}
+    \includegraphics[width=\linewidth]{../schemes/Scheme6.png}
+
+    There are too much computations required to count this scheme which dramatically decreases the precision, so, I didn't solve this equation.
+
+    \newpage
+
+    % Scheme 8:
+    \subsection{Scheme 8}\label{subsec:scheme-8}
+    \includegraphics[width=\linewidth]{../schemes/Scheme8.png}
+
+    There are too much computations required to count this scheme which dramatically decreases the precision, so, I didn't solve this equation.
 
 
 %
@@ -313,26 +329,93 @@
     This graph shows density of R distribution and its dependence on the resistance itself.
     Here we clearly see, that one of the points doesn't fit to the gap: there's probably a mistake there. \newline
 
+    \includegraphics[width=\linewidth]{../graphs/distribution.png}
+
+
+    (Actually, the main purpose of building this graph is to explain the machine, which points are OK to make automation possible)
 
     \newpage
     \section {Initial Dispersions}\label{sec:initial-dispersions}
     \input{../../../!LatexTemplates/low_random_dispersion.tex}\newline
     As mentioned above (\nameref{itm:low-dispersion}), the accuracy of the result will be significantly better than it is for all the initial results.\newline
-    To estimate the dispersions of \"R\"s, I'll use that library from \newline
+    To estimate the dispersions of "R"s, I'll use that library from \newline
     \url{https://github.com/sitandr/dispersion_counter}\newline
 
 
     \newpage
     \section{Optimizing the Target Function}\label{sec:optimizing-the-target-function}
+    When we've got rid of measurements with mistakes, we can find the optimal solution taking all the
+    Firstly, lets define that target function.
+    It is weighted sum of sides of some equations to optimize.
+    It's important for them to have the same order of magnitude to avoid unnecessary high valuability of some of the equations.
+    So, lets formulate them all in terms of voltage:
 
-    
+    \begin{equation*}
+        \nameref{subsec:scheme-1}:~ \varepsilon = A_1 \cdot \left( R_{\varepsilon} + R_A + R \right)
+    \end{equation*}
+
+    \begin{equation*}
+        \nameref{subsec:scheme-2}:~ V_2 = \frac{A_2}{ \frac{1}{R} + \frac{1}{R_V} }
+    \end{equation*}
+
+    \begin{equation*}
+        \nameref{subsec:scheme-3}:~ V_3 = \frac{\varepsilon}{R_\varepsilon + R_{sum}} \cdot R_{sum} =
+        \frac{\varepsilon}{R_\varepsilon + \frac{1}{\frac{1}{R} + \frac{1}{R_V}}} \cdot \frac{1}{\frac{1}{R} + \frac{1}{R_V}}
+    \end{equation*}
+
+    \begin{equation*}
+        \nameref{subsec:scheme-4}:~ V_4 = \varepsilon \cdot \frac{R_V}{R_\varepsilon + R + R_V}
+    \end{equation*}
+
+    \begin{equation*}
+        \nameref{subsec:scheme-5}:~ \varepsilon = A_5 \cdot \left( R + R_\varepsilon + R_V + R_A \right)
+    \end{equation*}
+
+    So, the final error function looks like this:
+
+    \begin{dmath*}
+        (\varepsilon - A_1 \cdot \left( R_{\varepsilon} + R_A + R \right))^2 +
+        (V_2 - \frac{A_2}{ \frac{1}{R} + \frac{1}{R_V} })^2 +
+        (V_3 - \frac{\varepsilon}{R_\varepsilon + \frac{1}{\frac{1}{R} + \frac{1}{R_V}}} \cdot \frac{1}{\frac{1}{R} + \frac{1}{R_V}})^2 +
+        (V_4 - \varepsilon \cdot \frac{R_V}{R_\varepsilon + R + R_V})^2 +
+        (\varepsilon - A_5 \cdot \left( R + R_\varepsilon + R_V + R_A \right))^2
+    \end{dmath*}
+
+    As the result, we have this error function values:\newline
+    \includegraphics[width=\linewidth]{../graphs/Error_function_without_weights.png}
+    \newline
+
+    But it definitely makes sense to use inversed resultant resistance dispersions as weights in error functions.\newline
+    \includegraphics[width=\linewidth]{../graphs/Error_function_with_weights.png}
+    \newline
+    We get a slightly different result.\newline
+    Let's view this value plotted on density graph:\newline
+    \includegraphics[width=\linewidth]{../graphs/distribution_with_best_value.png}
+
 
     \newpage
+    \section{Total Dispersions}\label{sec:total-dispersions}
+    The resultant dispersion should be probably smaller than all the usual ones.
+    This approximation seems to be quite reasonable:
+    \begin{equation*}
+        dispersion_{res} = \frac{dispersion_{average}}{\frac{N}{2}} \approx 17.26 \approx 17 (Ohm)
+    \end{equation*}
+
+
+
     \section{The Answer}\label{sec:answer}
 
-    \newpage
+    \begin{equation*}
+        R = 241 \pm 17 Ohm
+    \end{equation*}
+
+
     \section{Conclusion}\label{sec:conclusion}
 
+    The result looks pretty reasonable!
+
+    All the code is available in my github repository:
+    \url{https://github.com/donRumata03/Experiments/tree/master/MeasuringResistance}
 
 
 %    \begin{figure}[h!]

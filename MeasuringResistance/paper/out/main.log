@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.3)  9 OCT 2020 21:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.3)  10 OCT 2020 00:50
 entering extended mode
 **./main.tex
 (main.tex
@@ -838,6 +838,131 @@ File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/import\import.sty
 Package: import 2020/04/01  v 6.2
 )
+(C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/breqn\breqn.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2020-09-03 L3 programming layer (loader) 
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def"
+File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count337
+\l__pdf_internal_box=\box63
+))
+Package: breqn 2020/09/24 v0.98k Breaking equations
+
+(C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/breqn\flexisym.sty
+Package: flexisym 2020/09/24 v0.98k Make math characters macros
+LaTeX Info: Redefining \textprime on input line 299.
+LaTeX Info: Redefining \not on input line 357.
+
+(C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/breqn\cmbase.sym
+File: cmbase.sym 2007/12/19 v0.92
+LaTeX Info: Redefining \hbar on input line 324.
+LaTeX Info: Redefining \surd on input line 326.
+LaTeX Info: Redefining \angle on input line 334.
+LaTeX Info: Redefining \neq on input line 335.
+LaTeX Info: Redefining \mapsto on input line 336.
+LaTeX Info: Redefining \cong on input line 337.
+LaTeX Info: Redefining \notin on input line 340.
+LaTeX Info: Redefining \rightleftharpoons on input line 341.
+LaTeX Info: Redefining \doteq on input line 342.
+LaTeX Info: Redefining \hookrightarrow on input line 343.
+LaTeX Info: Redefining \hookleftarrow on input line 344.
+LaTeX Info: Redefining \bowtie on input line 345.
+LaTeX Info: Redefining \models on input line 346.
+LaTeX Info: Redefining \Longrightarrow on input line 347.
+LaTeX Info: Redefining \longrightarrow on input line 348.
+LaTeX Info: Redefining \Longleftarrow on input line 349.
+LaTeX Info: Redefining \longleftarrow on input line 350.
+LaTeX Info: Redefining \longmapsto on input line 351.
+LaTeX Info: Redefining \longleftrightarrow on input line 352.
+LaTeX Info: Redefining \Longleftrightarrow on input line 353.
+LaTeX Info: Redefining \cdots on input line 357.
+LaTeX Info: Redefining \vdots on input line 360.
+LaTeX Info: Redefining \ddots on input line 365.
+)
+(C:\Users\Vova\AppData\Roaming\MiKTeX\2.9\tex/latex/breqn\mathstyle.sty
+Package: mathstyle 2020/09/24 v0.98k Tracking mathstyle implicitly
+LaTeX Info: Redefining \displaystyle on input line 95.
+LaTeX Info: Redefining \textstyle on input line 97.
+LaTeX Info: Redefining \scriptstyle on input line 99.
+LaTeX Info: Redefining \scriptscriptstyle on input line 101.
+LaTeX Info: Redefining \genfrac on input line 149.
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count338
+\calc@Bcount=\count339
+\calc@Adimen=\dimen300
+\calc@Bdimen=\dimen301
+\calc@Askip=\skip195
+\calc@Bskip=\skip196
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count340
+\calc@Cskip=\skip197
+)
+\inf@bad=\count341
+\maxint=\count342
+\listwidth=\dimen302
+\eqnumsep=\dimen303
+\eqmargin=\dimen304
+\eqlinespacing=\skip198
+\eqlineskip=\skip199
+\eqlineskiplimit=\dimen305
+\eqbinoffset=\muskip18
+\eqdelimoffset=\muskip19
+\eqindentstep=\dimen306
+\eqstyle=\toks41
+\eqbreakdepth=\count343
+\eqinterlinepenalty=\count344
+\intereqpenalty=\count345
+\intereqskip=\skip256
+\prerelpenalty=\count346
+\prebinoppenalty=\count347
+\Dmedmuskip=\muskip20
+\Dthickmuskip=\muskip21
+\eqleftskip=\skip257
+\eqrightskip=\skip258
+\eq@vspan=\skip259
+\eq@binoffset=\muskip22
+\EQ@box=\box64
+\EQ@copy=\box65
+\EQ@numbox=\box66
+\eq@wdNum=\dimen307
+\GRP@numbox=\box67
+\grp@wdNum=\dimen308
+\eq@lines=\count348
+\eq@curline=\count349
+\eq@badness=\count350
+\EQ@vims=\count351
+\eq@dp=\dimen309
+\eq@wdL=\dimen310
+\eq@wdT=\dimen311
+\eq@wdMin=\dimen312
+\grp@wdL=\dimen313
+\grp@wdR=\dimen314
+\grp@wdT=\dimen315
+\eq@wdRmax=\dimen316
+\eq@firstht=\dimen317
+\eq@wdCond=\dimen318
+\eq@indentstep=\dimen319
+\eq@linewidth=\dimen320
+\grp@linewidth=\dimen321
+\eq@hshift=\dimen322
+\eq@given@sidespace=\dimen323
+\mathindent=\dimen324
+\eq@final@linecount=\count352
+\eq@wdR=\dimen325
+\EQ@continue=\toks42
+\lr@level=\count353
+\GRP@queue=\toks43
+\GRP@box=\box68
+\GRP@wholebox=\box69
+\darraycolsep=\skip260
+\cur@row=\count354
+\cur@col=\count355
+\conditionsep=\skip261
+)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries/circ
 uits\tikzlibrarycircuits.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
@@ -850,21 +975,21 @@ librarydecorations.markings.code.tex"
 librarydecorations.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduledecorations.code
 .tex"
-\pgfdecoratedcompleteddistance=\dimen300
-\pgfdecoratedremainingdistance=\dimen301
-\pgfdecoratedinputsegmentcompleteddistance=\dimen302
-\pgfdecoratedinputsegmentremainingdistance=\dimen303
-\pgf@decorate@distancetomove=\dimen304
-\pgf@decorate@repeatstate=\count337
-\pgfdecorationsegmentamplitude=\dimen305
-\pgfdecorationsegmentlength=\dimen306
+\pgfdecoratedcompleteddistance=\dimen326
+\pgfdecoratedremainingdistance=\dimen327
+\pgfdecoratedinputsegmentcompleteddistance=\dimen328
+\pgfdecoratedinputsegmentremainingdistance=\dimen329
+\pgf@decorate@distancetomove=\dimen330
+\pgf@decorate@repeatstate=\count356
+\pgfdecorationsegmentamplitude=\dimen331
+\pgfdecorationsegmentlength=\dimen332
 )
-\tikz@lib@dec@box=\box63
+\tikz@lib@dec@box=\box70
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibraryd
 ecorations.markings.code.tex"))
-\tikz@lib@circ@count=\count338
-\tikzcircuitssizeunit=\dimen307
+\tikz@lib@circ@count=\count357
+\tikzcircuitssizeunit=\dimen333
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries/circ
 uits\tikzlibrarycircuits.ee.code.tex"
@@ -879,7 +1004,7 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryarrows.code.t
 ex"
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen308
+\arrowsize=\dimen334
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes/circuits\pgflibr
 aryshapes.gates.ee.IEC.code.tex"))
@@ -891,32 +1016,27 @@ uits\tikzlibrarycircuits.logic.code.tex")
 aryshapes.gates.logic.IEC.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes/circuits\pgflibr
 aryshapes.gates.logic.code.tex")))
-("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def"
-File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count339
-\l__pdf_internal_box=\box64
-)
 (D:/Projects\Experiments\MeasuringResistance\paper\out\main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-\AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring OFF on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+\AtBeginShipoutBox=\box71
+Package hyperref Info: Link coloring OFF on input line 37.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -928,14 +1048,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count340
+\c@section@level=\count358
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 36.
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 37.
+LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \nameref on input line 37.
 (D:/Projects\Experiments\MeasuringResistance\paper\out\main.out)
 (D:/Projects\Experiments\MeasuringResistance\paper\out\main.out)
 \@outlinefile=\write5
@@ -944,17 +1064,17 @@ LaTeX Info: Redefining \nameref on input line 36.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count341
-\scratchdimen=\dimen309
-\scratchbox=\box66
-\nofMPsegments=\count342
-\nofMParguments=\count343
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count344
-\MPscratchDim=\dimen310
-\MPnumerator=\count345
-\makeMPintoPDFobject=\count346
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count359
+\scratchdimen=\dimen335
+\scratchbox=\box72
+\nofMPsegments=\count360
+\nofMParguments=\count361
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count362
+\MPscratchDim=\dimen336
+\MPnumerator=\count363
+\makeMPintoPDFobject=\count364
+\everyMPtoPDFconversion=\toks45
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -964,85 +1084,137 @@ ABD: EveryShipout initializing macros [1
 
 {C:/Users/Vova/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (D:/Projects\Experiments\MeasuringResistance\paper\out\main.toc) [1] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
-<../schemes/Scheme1.png, id=104, 476.0184pt x 176.0979pt>
+<../schemes/Scheme1.png, id=119, 476.0184pt x 176.0979pt>
 File: ../schemes/Scheme1.png Graphic file (type png)
 <use ../schemes/Scheme1.png>
-Package pdftex.def Info: ../schemes/Scheme1.png  used on input line 97.
+Package pdftex.def Info: ../schemes/Scheme1.png  used on input line 98.
 (pdftex.def)             Requested size: 369.0pt x 136.51208pt.
 [3] [4 <../schemes/Scheme1.png>]
-<../schemes/Scheme2.png, id=124, 476.0184pt x 263.0628pt>
+<../schemes/Scheme2.png, id=139, 476.0184pt x 263.0628pt>
 File: ../schemes/Scheme2.png Graphic file (type png)
 <use ../schemes/Scheme2.png>
-Package pdftex.def Info: ../schemes/Scheme2.png  used on input line 114.
+Package pdftex.def Info: ../schemes/Scheme2.png  used on input line 115.
 (pdftex.def)             Requested size: 369.0pt x 203.92775pt.
  [5 <../schemes/Scheme2.png>]
-<../schemes/Scheme3.png, id=132, 476.0184pt x 292.2117pt>
+<../schemes/Scheme3.png, id=147, 476.0184pt x 292.2117pt>
 File: ../schemes/Scheme3.png Graphic file (type png)
 <use ../schemes/Scheme3.png>
-Package pdftex.def Info: ../schemes/Scheme3.png  used on input line 142.
+Package pdftex.def Info: ../schemes/Scheme3.png  used on input line 143.
 (pdftex.def)             Requested size: 369.0pt x 226.52414pt.
  [6 <../schemes/Scheme3.png>]
-<../schemes/Scheme4.png, id=142, 476.0184pt x 261.1356pt>
+<../schemes/Scheme4.png, id=157, 476.0184pt x 261.1356pt>
 File: ../schemes/Scheme4.png Graphic file (type png)
 <use ../schemes/Scheme4.png>
-Package pdftex.def Info: ../schemes/Scheme4.png  used on input line 175.
+Package pdftex.def Info: ../schemes/Scheme4.png  used on input line 176.
 (pdftex.def)             Requested size: 369.0pt x 202.43376pt.
  [7 <../schemes/Scheme4.png>]
-<../schemes/Scheme5.png, id=149, 476.0184pt x 261.3765pt>
+<../schemes/Scheme5.png, id=164, 476.0184pt x 261.3765pt>
 File: ../schemes/Scheme5.png Graphic file (type png)
 <use ../schemes/Scheme5.png>
-Package pdftex.def Info: ../schemes/Scheme5.png  used on input line 194.
+Package pdftex.def Info: ../schemes/Scheme5.png  used on input line 195.
 (pdftex.def)             Requested size: 369.0pt x 202.62051pt.
  [8 <../schemes/Scheme5.png>]
-<../schemes/Scheme6.png, id=156, 476.0184pt x 238.7319pt>
+<../schemes/Scheme6.png, id=171, 476.0184pt x 238.7319pt>
 File: ../schemes/Scheme6.png Graphic file (type png)
 <use ../schemes/Scheme6.png>
-Package pdftex.def Info: ../schemes/Scheme6.png  used on input line 212.
+Package pdftex.def Info: ../schemes/Scheme6.png  used on input line 213.
 (pdftex.def)             Requested size: 369.0pt x 185.0663pt.
  [9 <../schemes/Scheme6.png>]
-
-LaTeX Warning: Reference `subsec:scheme-7' on page 10 undefined on input line 2
-91.
-
-
-LaTeX Warning: Reference `subsec:scheme-8' on page 10 undefined on input line 3
-00.
-
-[10] [11] (../../../!LatexTemplates/low_random_dispersion.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--317
+File: ../schemes/Scheme6.png Graphic file (type png)
+<use ../schemes/Scheme6.png>
+Package pdftex.def Info: ../schemes/Scheme6.png  used on input line 238.
+(pdftex.def)             Requested size: 369.0pt x 185.0663pt.
+ [10]
+<../schemes/Scheme8.png, id=182, 476.0184pt x 293.4162pt>
+File: ../schemes/Scheme8.png Graphic file (type png)
+<use ../schemes/Scheme8.png>
+Package pdftex.def Info: ../schemes/Scheme8.png  used on input line 246.
+(pdftex.def)             Requested size: 369.0pt x 227.45789pt.
+ [11 <../schemes/Scheme8.png>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 327--331
 
  []
 
-[12] [13] [14] [15]
+<../graphs/distribution.png, id=201, 1805.3046pt x 1002.3849pt>
+File: ../graphs/distribution.png Graphic file (type png)
+<use ../graphs/distribution.png>
+Package pdftex.def Info: ../graphs/distribution.png  used on input line 332.
+(pdftex.def)             Requested size: 369.0pt x 204.87843pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 332--333
+[][] 
+ []
+
+[13 <../graphs/distribution.png>]
+(../../../!LatexTemplates/low_random_dispersion.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--343
+
+ []
+
+[14]
+<../graphs/Error_function_without_weights.png, id=219, 1805.3046pt x 1002.3849p
+t>
+File: ../graphs/Error_function_without_weights.png Graphic file (type png)
+<use ../graphs/Error_function_without_weights.png>
+Package pdftex.def Info: ../graphs/Error_function_without_weights.png  used on 
+input line 385.
+(pdftex.def)             Requested size: 369.0pt x 204.87843pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--387
+
+ []
+
+
+Underfull \vbox (badness 2617) has occurred while \output is active []
+
+ [15]
+<../graphs/Error_function_with_weights.png, id=224, 1805.3046pt x 1002.3849pt>
+File: ../graphs/Error_function_with_weights.png Graphic file (type png)
+<use ../graphs/Error_function_with_weights.png>
+Package pdftex.def Info: ../graphs/Error_function_with_weights.png  used on inp
+ut line 389.
+(pdftex.def)             Requested size: 369.0pt x 204.87843pt.
+<../graphs/distribution_with_best_value.png, id=225, 1805.3046pt x 1002.3849pt>
+
+File: ../graphs/distribution_with_best_value.png Graphic file (type png)
+<use ../graphs/distribution_with_best_value.png>
+Package pdftex.def Info: ../graphs/distribution_with_best_value.png  used on in
+put line 393.
+(pdftex.def)             Requested size: 369.0pt x 204.87843pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <../graphs/Error_function_without_weights.png> <../graphs/Error_function_w
+ith_weights.png>] [17 <../graphs/distribution_with_best_value.png>] [18]
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
 
 (D:/Projects\Experiments\MeasuringResistance\paper\out\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 434.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 142C58F3BEFA70EB2CFD519B412FD641;954.
+(rerunfilecheck)             Checksum: 0BE3FEAF8E6DB133DE1B34F6C1389D35;1132.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 434.
  ) 
 Here is how much of TeX's memory you used:
- 21701 strings out of 481199
- 421707 string characters out of 2913476
- 692956 words of memory out of 3000000
- 36856 multiletter control sequences out of 15000+200000
- 544557 words of font info for 61 fonts, out of 3000000 for 9000
+ 22524 strings out of 481199
+ 433132 string characters out of 2913476
+ 710295 words of memory out of 3000000
+ 37651 multiletter control sequences out of 15000+200000
+ 543936 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,76p,407b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,12n,76p,407b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Vova\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1095.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
@@ -1060,9 +1232,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on D:/Projects\Experiments\MeasuringResistance\paper\out\main.pd
-f (16 pages, 395889 bytes).
+f (19 pages, 710305 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 
