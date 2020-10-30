@@ -18,6 +18,13 @@ for i in range(len(resistances)):
 print("____________________________________________")
 print(json.dumps(strange_table, indent = 4))
 
+strange_table_file = open("strange_table.txt", "w")
+str_table: str = ""
+for value in strange_table:
+	str_table += str(value[0]) + " " + str(value[1]) + "\n"
+
+strange_table_file.write(str_table)
+strange_table_file.close()
 
 if __name__ == '__main__':
 	plt.xlabel("1 / (R + R_known)")
