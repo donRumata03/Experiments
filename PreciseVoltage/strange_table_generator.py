@@ -18,6 +18,14 @@ for i in range(len(resistances)):
 print("____________________________________________")
 print(json.dumps(strange_table, indent = 4))
 
+
+if __name__ == '__main__':
+	plt.xlabel("1 / (R + R_known)")
+	plt.ylabel("1 / sqrt(P * (R + R_known))")
+	plt.scatter(*zip(*strange_table))
+	plt.show()
+
+
 """
 Outputs:
 
