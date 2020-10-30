@@ -27,13 +27,16 @@ bottom_line = (linear_coefficients[0], linear_coefficients[1] - line_value(linea
 
 # print("Upper line is:", upper_line)
 
+predicted_area = (current_time_dependency[-1][0] - current_time_dependency[0][0]) \
+			* (linearly_approximated_current_time_dependency[-1] + linearly_approximated_current_time_dependency[0]) / 2
 lowest_area = count_graph_area(zip([i[0] for i in current_time_dependency], np.polyval(bottom_line, [i[0] for i in current_time_dependency])))
 highest_area = count_graph_area(zip([i[0] for i in current_time_dependency], np.polyval(upper_line, [i[0] for i in current_time_dependency])))
+print("Predicted area:", predicted_area)
 print("Min possible area:", lowest_area)
 print("Max possible area:", highest_area)
 
-upper_dS = highest_area - count_graph_area(smoothed_current_time_dependency)
-lower_dS = count_graph_area(smoothed_current_time_dependency) - lowest_area
+upper_dS = highest_area - predicted_area
+lower_dS = predicted_area - lowest_area
 average_dS = (upper_dS + lower_dS) / 2
 
 print("dx's:", lower_dS, upper_dS, average_dS)

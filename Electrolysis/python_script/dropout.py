@@ -7,6 +7,12 @@ from typing import *
 def line_value(line : Tuple[float, float], _x : float):
 	return _x * line[0] + line[1]
 
+
+# A.K.A. «x(y)» = (y - b) / k
+def inverse_line_value(line : Tuple[float, float], _y : float):
+	return (_y - line[1]) / line[0]
+
+
 def line_point_distance(point : Tuple[float, float], line : Tuple[float, float], add_sign : bool):
 	line_A = line[0]
 	line_B = -1
@@ -25,6 +31,30 @@ def line_point_distance(point : Tuple[float, float], line : Tuple[float, float],
 # print(1 / math.sqrt(2))
 
 print("Line: k =", linear_coefficients[0], ", b =", linear_coefficients[1])
+
+# RMS for
+I_diffs = np.array([p[1] for p in current_time_dependency]) - np.polyval(linear_coefficients, [p[0] for p in current_time_dependency])
+t_diffs = np.array([p[0] for p in current_time_dependency]) - np.array([inverse_line_value(linear_coefficients, p[1]) for p in current_time_dependency])
+
+print("RMS for I:", math.sqrt(
+	statistics.mean(
+		[(line_value(linear_coefficients, point[0]) - point[1]) ** 2 for point in current_time_dependency]
+	)
+))
+
+print("RMS for I #2:", math.sqrt(
+	statistics.mean(
+		I_diffs ** 2  # [v**2 for v in I_diff]
+	)
+))
+
+print("RMS for t:", math.sqrt(
+	statistics.mean(
+		t_diffs ** 2  # [v**2 for v in I_diff]
+	)
+))
+
+
 distances_from_the_line = [line_point_distance(point, linear_coefficients, True) for point in current_time_dependency]
 unsigned_distances_from_the_line = [line_point_distance(point, linear_coefficients, False) for point in current_time_dependency]
 distance_distribution = count_density(distances_from_the_line, 0.1, 1000, smoothing_normal)
