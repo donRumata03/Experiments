@@ -47,9 +47,12 @@ from matplotlib import pyplot as plt
 voltages = [i[0] for i in data]
 currents = [i[1] for i in data]
 
-plt.scatter(voltages, currents, label="Voltage vs. Current")
+if __name__ == '__main__':
+    plt.scatter(voltages, currents, label="Voltage vs. Current")
 
-plt.xlabel("Voltage, Volts")
-plt.ylabel("Current, Amperes")
+    plt.xlabel("Voltage, Volts")
+    plt.ylabel("Current, Amperes")
+
+    plt.show()
 
 
