@@ -65,12 +65,13 @@ data = [
     (0.179, 4.07),
 
     # At peak:
-    (0.96, 2.02),
-    (0.80, 2.45),
-    (0.85, 2.30),
-    (0.92, 2.12),
-    (0.78, 2.49),
-    (1.07, 1.74),
+
+    # (0.96, 2.02),
+    # (0.80, 2.45),
+    # (0.85, 2.30),
+    # (0.92, 2.12),
+    # (0.78, 2.49),
+    # (1.07, 1.74),
 ]
 
 Rs_Ps = [(get_R_by_U_known_U_total(*i), get_P_by_U_known_U_total(*i)) for i in data]
@@ -86,8 +87,17 @@ print("Max Power is:", max(powers), "; at R = ", resistances[powers.index(max(po
 print(data[powers.index(max(powers)) - 2:powers.index(max(powers)) + 2])
 
 # from matplotlib import pyplot as plt
-# plt.plot(resistances, powers)
 
+from matplotlib import pyplot as plt
+
+if __name__ == '__main__':
+    plt.plot(resistances, powers)
+    plt.show()
+
+
+
+
+"""
 import os
 
 the_path = "temp_plot.txt"
@@ -99,3 +109,4 @@ the_file.close()
 
 # os.system("gnuplot")
 # os.system(f"plot '{the_path}' with linespoints ls 1")
+"""
