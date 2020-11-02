@@ -40,6 +40,7 @@ currents = [i[1] for i in data]
 
 import os
 if os.name == "posix":
+    print("F_cking Linux!")
     exit(0)
 
 from matplotlib import pyplot as plt
