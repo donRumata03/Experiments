@@ -30,8 +30,11 @@ def process_measurement_data(data: List[Tuple[int, float]]):
 # Data:         ( Day index | measured tangent ) --> converted to   ( Date | degree )
 
 
-real_data_by_vova = process_measurement_data([
+vova_house_h = 28.5
 
+real_data_by_vova = process_measurement_data([
+		(1, vova_house_h / 75),
+		(2, vova_house_h / 70)
 ])
 
 
@@ -61,11 +64,12 @@ _raw_real_data_by_andrew = [
 real_data_by_andrew = process_measurement_data(_raw_real_data_by_andrew)
 
 real_data_by_sergey = process_measurement_data([
-
+		(3, math.tan(math.radians(17))),
+		(46, math.tan(math.radians(3.4))),
 ])
 
 real_data_by_nikita = process_measurement_data([
-
+		(47, math.tan(math.radians(5))),
 ])
 
 
