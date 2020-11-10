@@ -1,3 +1,4 @@
+import json
 import math
 import numpy as np
 from typing import *
@@ -16,7 +17,7 @@ initial_date = date(2020, 9, 24)
 """
 def day_index_to_date(day_index: int):
 	assert day_index < n_days
-	initial_date + timedelta(days=day_index)
+	return initial_date + timedelta(days=day_index)
 
 def date_to_day_index(this_date: date):
 	return (this_date - initial_date).days
@@ -36,7 +37,7 @@ real_data_by_vova = process_measurement_data([
 
 andrew_house_height = 14.
 andrew_stick_height = 1.205
-real_data_by_andrew = process_measurement_data([
+_raw_real_data_by_andrew = [
 	# Nothing for day 0
 	(1, andrew_house_height / (45 + 0.0)),
 	(2, andrew_house_height / (45 + 2.3)),
@@ -56,7 +57,8 @@ real_data_by_andrew = process_measurement_data([
 	# Little HALYAVA
 
 	(47, andrew_stick_height / 17.5)
-])
+]
+real_data_by_andrew = process_measurement_data(_raw_real_data_by_andrew)
 
 real_data_by_sergey = process_measurement_data([
 
@@ -74,8 +76,14 @@ all_real_data = sorted(
 	real_data_by_nikita[:]
 )
 
+def print_measurement_data(data):
+	print(json.dumps(
+		[(i[0].__str__(), i[1]) for i in data]
+	, indent=1))
+
 if __name__ == '__main__':
-	print(all_real_data)
+	print_measurement_data(all_real_data)
+	print(_raw_real_data_by_andrew)
 	print(day_index_to_date(0))
 
 
