@@ -17,15 +17,38 @@ initial_date = date(2020, 9, 24)
 """
 def day_index_to_date(day_index: int):
 	assert day_index < n_days
-	return initial_date + timedelta(days=day_index)
+	return initial_date + timedelta(days=int(day_index))
 
 def date_to_day_index(this_date: date):
 	return (this_date - initial_date).days
 
+all_measured_day_indices = list(range(n_days))
+all_measured_dates = [day_index_to_date(i) for i in all_measured_day_indices]
+
 ########
 
 def process_measurement_data(data: List[Tuple[int, float]]):
-	return [(day_index_to_date(measurement[0] - 2), math.atan(measurement[1])) for measurement in data]
+	return [(day_index_to_date(measurement[0]), math.atan(measurement[1])) for measurement in data]
+
+def convert_data_to_day_indexes(data):
+	return [
+		(date_to_day_index(i[0]), i[1]) for i in data
+	]
+
+def convert_data_to_dates(data):
+	return [
+		(day_index_to_date(i[0]), i[1]) for i in data
+	]
+
+def convert_radians_to_degrees(data):
+	return [
+		(i[0], math.degrees(i[1])) for i in data
+	]
+
+def convert_degrees_to_radians(data):
+	return [
+		(i[0], math.radians(i[1])) for i in data
+	]
 
 # Data:         ( Day index | measured tangent ) --> converted to   ( Date | degree )
 
@@ -86,10 +109,14 @@ good_real_data = sorted(
 	real_data_by_nikita[:]
 )
 
+
 def print_measurement_data(data):
-	print(json.dumps(
-		[(i[0].__str__(), i[1]) for i in data]
-	, indent=1))
+	print(
+		json.dumps(
+			[(i[0].__str__(), i[1]) for i in data],
+			indent=1
+		)
+	)
 
 if __name__ == '__main__':
 	print_measurement_data(all_real_data)
