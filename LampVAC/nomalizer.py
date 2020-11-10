@@ -1,7 +1,7 @@
 from known_exp_approximation import *
 
-y_noise_stddev = max(currents) / 70
-new_data_amount = 100
+y_noise_stddev = max(currents) / 300
+new_data_amount = 10000
 
 y_noise = np.random.normal(0, y_noise_stddev, new_data_amount)
 
