@@ -80,6 +80,12 @@ all_real_data = sorted(
 	real_data_by_nikita[:]
 )
 
+good_real_data = sorted(
+	real_data_by_andrew[:] +
+	real_data_by_sergey[:] +
+	real_data_by_nikita[:]
+)
+
 def print_measurement_data(data):
 	print(json.dumps(
 		[(i[0].__str__(), i[1]) for i in data]
