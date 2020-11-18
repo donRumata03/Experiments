@@ -34,8 +34,12 @@ data = [
 
 data.sort(key=lambda pair: pair[0])
 
+open("real_data.txt", "w").write("\n".join(map(lambda t: f"{t[0]} {t[1]}", data)))
+
+
 voltages = [i[0] for i in data]
 currents = [i[1] for i in data]
+
 
 
 import os
