@@ -24,6 +24,14 @@ for recursion_limit in range(1, 16):
 print(values)
 
 if __name__ == '__main__':
+	matplotlib.rcParams.update({'font.size': 16})
+
+	plt.title("N-ary search Dynamic")
+
 	plt.plot(*zip(*values))
+
+	plt.xlabel("Iteration's Index")
+	plt.ylabel("MSE")
+
 	plt.show()
 

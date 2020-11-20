@@ -6,6 +6,10 @@ if __name__ == '__main__':
 	plt.xlabel("Resistance, Ohms")
 	plt.ylabel("Power, Watts")
 
+	plt.xlim(left=0)
+	plt.ylim(bottom=0)
+
+
 	plt.legend()
 	plt.show()
 

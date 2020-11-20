@@ -1,5 +1,6 @@
 #           Voltage, Current:
 import matplotlib
+import csv
 
 data = [
     # (0.00, 0.00),
@@ -37,6 +38,12 @@ data.sort(key=lambda pair: pair[0])
 
 open("real_data.txt", "w").write("\n".join(map(lambda t: f"{t[0]} {t[1]}", data)))
 
+csv.writer(open("real_data.csv", "w", newline="")).writerows([("Voltage", "Current")] + data)
+
+# csv_writer = csv.writer(open("real_data.csv", "w")) # .write("\n".join(map(lambda t: f"{t[0]} {t[1]}", data)))
+# csv_writer.writerow(["Voltage", "Current"])
+# csv_writer.writerows(data)
+
 
 voltages = [p[0] for p in data]
 currents = [p[1] for p in data]
@@ -54,10 +61,14 @@ from matplotlib import pyplot as plt
 
 if __name__ == '__main__':
     # plt.tick_params(axis='both', which='major', labelsize=16)
+
     matplotlib.rcParams.update({'font.size': 16})
     plt.scatter(voltages, currents, label="Voltage vs. Current")
     plt.xlabel("Voltage, Volts")
     plt.ylabel("Current, Amperes")
+
+    plt.xlim(left=0)
+    plt.ylim(bottom=0)
 
     plt.legend()
     plt.show()

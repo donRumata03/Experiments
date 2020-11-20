@@ -24,14 +24,20 @@ print(f"Coeffs are: {coeffs}")
 
 resistance_data = np.linspace(0, resistances[-1], 1000)
 
+add_parts = True
 
 if __name__ == '__main__':
 	matplotlib.rcParams.update({'font.size': 16})
 
 	plt.scatter(resistances, powers, label="Resistance vs. Power")
 	plt.plot(resistance_data, power_from_resistance_anal_function(resistance_data, *coeffs), label="Approximation")
-	plt.plot(resistance_data, anal_function_interference(resistance_data, *coeffs), label="Radiation")
-	plt.plot(resistance_data, anal_function_conductivity(resistance_data, *coeffs), label="Conductivity")
+
+	if add_parts:
+		plt.plot(resistance_data, anal_function_interference(resistance_data, *coeffs), label="Radiation")
+		plt.plot(resistance_data, anal_function_conductivity(resistance_data, *coeffs), label="Conductivity")
+
+	plt.xlim(left=0)
+	# plt.ylim(bottom=0)
 
 	plt.xlabel("Resistance, Ohms")
 	plt.ylabel("Power, Watts")
