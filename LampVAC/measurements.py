@@ -1,7 +1,8 @@
 #           Voltage, Current:
+import matplotlib
 
 data = [
-    (0.00, 0.00),
+    # (0.00, 0.00),
     (0.82, 0.08),
     (0.96, 0.09),
     (1.52, 0.11),
@@ -37,9 +38,10 @@ data.sort(key=lambda pair: pair[0])
 open("real_data.txt", "w").write("\n".join(map(lambda t: f"{t[0]} {t[1]}", data)))
 
 
-voltages = [i[0] for i in data]
-currents = [i[1] for i in data]
-
+voltages = [p[0] for p in data]
+currents = [p[1] for p in data]
+resistances = [p[0] / p[1] if p[1] != 0 else 0 for p in data]
+powers = [p[0] * p[1] for p in data]
 
 
 import os
@@ -49,15 +51,15 @@ if os.name == "posix":
 
 from matplotlib import pyplot as plt
 
-voltages = [i[0] for i in data]
-currents = [i[1] for i in data]
 
 if __name__ == '__main__':
+    # plt.tick_params(axis='both', which='major', labelsize=16)
+    matplotlib.rcParams.update({'font.size': 16})
     plt.scatter(voltages, currents, label="Voltage vs. Current")
-
     plt.xlabel("Voltage, Volts")
     plt.ylabel("Current, Amperes")
 
+    plt.legend()
     plt.show()
 
 
