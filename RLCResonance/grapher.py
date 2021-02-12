@@ -2,6 +2,7 @@ from measurements import *
 from matplotlib import pyplot as plt
 
 plt.scatter(*zip(*real_data))
+plt.plot((theoretic_peak_freq, theoretic_peak_freq), (0, max([i[1] for i in real_data]) * 1.5))
 plt.show()
 
 
@@ -10,7 +11,7 @@ plt.show()
 class Sets:
 	@property
 	def ø(self):
-		return ""
+		return set()
 
 # def ø():
 # 	return set()

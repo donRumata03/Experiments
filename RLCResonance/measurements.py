@@ -1,11 +1,18 @@
 import math
 
-R_L = 288 # 86.1
-R_R = 1249 # 1243.
-R = R_L + R_R
+measured_R_L = 288 # 86.1
+measured_R_R = 1249 # 1243.
+measured_R = measured_R_L + measured_R_R
 
-c = 13.4e-9 # 292e-9
-L = 1.443 # 1.425
+measured_c = 13.4e-9 # 292e-9
+measured_L = 1.443 # 1.425
+
+
+#
+c = measured_c # * 0.9**2
+L = measured_L
+R = measured_R
+
 
 theoretic_peak_freq = 1 / (math.sqrt(L * c) * 2 * math.pi)
 print(f"According to theory, the peak should be at frequency {theoretic_peak_freq}")
