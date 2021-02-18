@@ -39,6 +39,8 @@ anal_function = anal_function_without_c
 opt, cov = curve_fit(anal_function, [i[0] for i in real_data], [i[1] for i in real_data])
 print(opt)
 
+
+
 freqs = np.linspace(min([i[0] for i in real_data]), max([i[0] for i in real_data]), 1_000)
 
 plt.plot(freqs, anal_function(freqs, *opt))

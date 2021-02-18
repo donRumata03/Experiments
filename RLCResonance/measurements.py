@@ -10,7 +10,7 @@ measured_L = 1.443 # 1.425
 
 #
 c = measured_c # * 0.9**2
-L = measured_L
+L = measured_L * 0.9
 R = measured_R
 
 
