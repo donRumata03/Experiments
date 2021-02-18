@@ -1,6 +1,9 @@
-from typing import *
+from typing import Callable
+from sys import setrecursionlimit
+setrecursionlimit(int(1e+9))
 
 def n_ary_search(function: Callable, depth_left: int, left: float, right: float, n_arity: int, ns : int, max_or_min: bool = True) -> float:
+	# print(depth_left, ": [", left, ";", right, "]")
 	if depth_left == 0:
 		return (left + right) / 2
 
@@ -16,7 +19,7 @@ def n_ary_search(function: Callable, depth_left: int, left: float, right: float,
 			optimal_x = this_x
 			optimal_value = this_value
 
-	return n_ary_search(function, depth_left - 1, optimal_x - offset, optimal_x + offset, n_arity, ns)
+	return n_ary_search(function, depth_left - 1, max(left, optimal_x - offset), min(right, optimal_x + offset), n_arity, ns)
 
 
 

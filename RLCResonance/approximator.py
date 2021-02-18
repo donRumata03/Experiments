@@ -40,9 +40,14 @@ opt, cov = curve_fit(anal_function, [i[0] for i in real_data], [i[1] for i in re
 print(opt)
 
 
+def configured_resonance_curve(frequency):
+	return anal_function(frequency, *opt)
 
-freqs = np.linspace(min([i[0] for i in real_data]), max([i[0] for i in real_data]), 1_000)
 
-plt.plot(freqs, anal_function(freqs, *opt))
-plt.scatter(*zip(*real_data))
-plt.show()
+
+if __name__ == '__main__':
+	freqs = np.linspace(min([i[0] for i in real_data]), max([i[0] for i in real_data]), 1_000)
+
+	plt.plot(freqs, configured_resonance_curve(freqs))
+	plt.scatter(*zip(*real_data))
+	plt.show()
