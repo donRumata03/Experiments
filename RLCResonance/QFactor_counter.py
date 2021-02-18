@@ -66,5 +66,6 @@ if __name__ == '__main__':
 	factor_q_factor_estimator(configured_resonance_curve)
 
 	print("_______________________________________")
-	print("QFactor is: ", count_QFactor_by_curve(configured_resonance_curve))
+	print(f"QFactor is: {count_QFactor_by_curve(configured_resonance_curve)}")
+	print(f"QFactor (analytically) is : {math.sqrt(L / c) / R}")
 
