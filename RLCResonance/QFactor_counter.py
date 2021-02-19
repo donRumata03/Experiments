@@ -24,13 +24,13 @@ def get_estimator(resonance_curve: Callable):
 def count_QFactor_by_curve(resonance_curve: Callable) -> float:
 	# Find max:
 	optimal_freq, max_value = find_resonance(resonance_curve)
-
+	print(f"Peak at: {optimal_freq}")
 	# required_value = max_value / math.sqrt(2)
 	# print(f"Looking for: {required_value} (= {max_value} / sqrt(2))", )
 	estimator = get_estimator(resonance_curve) # lambda x: (resonance_curve(x) - required_value)**2
 
 	left_window_border = n_ary_search(estimator, 300, 1e-5, optimal_freq, 100, 20, True)
-	right_window_border = n_ary_search(estimator, 500, optimal_freq, 2e+4, 100, 20, True)
+	right_window_border = n_ary_search(estimator, 500, optimal_freq, 1e+5, 100, 20, True)
 	print(left_window_border, right_window_border)
 	print(estimator(left_window_border), estimator(right_window_border))
 	# 1147.,  1328.
@@ -46,6 +46,8 @@ def graph_q_factor_finding(resonance_curve: Callable):
 
 	required_value = max_value / math.sqrt(2)
 
+	plt.xlabel("Frequency, Hz")
+	plt.ylabel("Amplitude, volts")
 	freqs = np.linspace(min([i[0] for i in real_data]), max([i[0] for i in real_data]), 1_000)
 	plt.plot(freqs, configured_resonance_curve(freqs))
 	plt.scatter(*zip(*real_data))
@@ -56,16 +58,26 @@ def graph_q_factor_finding(resonance_curve: Callable):
 def factor_q_factor_estimator(resonance_curve: Callable):
 	est = get_estimator(resonance_curve)
 
+	plt.xlabel("Frequency, Hz")
+	plt.ylabel("Amplitude, volts")
 	freqs = np.linspace(min([i[0] for i in real_data]), max([i[0] for i in real_data]), 1_000)
 	plt.plot(freqs, est(freqs))
 	plt.show()
 
 
 if __name__ == '__main__':
-	# graph_q_factor_finding(configured_resonance_curve)
-	factor_q_factor_estimator(configured_resonance_curve)
+	graph_q_factor_finding(configured_resonance_curve)
+	# factor_q_factor_estimator(configured_resonance_curve)
+
+	exit(9)
+
 
 	print("_______________________________________")
-	print(f"QFactor is: {count_QFactor_by_curve(configured_resonance_curve)}")
-	print(f"QFactor (analytically) is : {math.sqrt(L / c) / R}")
+	Q_graph = count_QFactor_by_curve(configured_resonance_curve)
+	print(f"L = {L}, C = {c}, R = {R}")
+	Q_anal = math.sqrt(L / c) / R
+	print(f"QFactor (analytically) is : {Q_anal}")
+
+	print(f"Graph QFactor is: {Q_graph}")
+	print(f"Dispersion: {abs(Q_anal - Q_graph) / (Q_anal + Q_graph)}")
 

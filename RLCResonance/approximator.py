@@ -48,6 +48,9 @@ def configured_resonance_curve(frequency):
 if __name__ == '__main__':
 	freqs = np.linspace(min([i[0] for i in real_data]), max([i[0] for i in real_data]), 1_000)
 
+	plt.xlabel("Frequency, Hz")
+	plt.ylabel("Amplitude, volts")
+
 	plt.plot(freqs, configured_resonance_curve(freqs))
 	plt.scatter(*zip(*real_data))
 	plt.show()
